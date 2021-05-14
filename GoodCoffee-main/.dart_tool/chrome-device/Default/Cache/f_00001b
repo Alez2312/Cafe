@@ -1,0 +1,502 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/flutter/src/material/tab_controller.dart', 'packages/goodcoffee/Modelo/Menu.dart', 'packages/goodcoffee/Values/EdgeInsetsApp.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/goodcoffee/Widgets/Components/ProductListView.dart', 'packages/goodcoffee/Modelo/Product.dart', 'packages/flutter/src/painting/box_fit.dart'], (function load__packages__goodcoffee__Widgets__MobileComponents__MenuTap_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__flutter__src__material__tab_controller$46dart, packages__goodcoffee__Modelo__Menu$46dart, packages__goodcoffee__Values__EdgeInsetsApp$46dart, packages__flutter__src__material__icon_button$46dart, packages__goodcoffee__Widgets__Components__ProductListView$46dart, packages__goodcoffee__Modelo__Product$46dart, packages__flutter__src__painting__box_fit$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const _interceptors = dart_sdk._interceptors;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const container = packages__flutter__src__widgets__widget_span$46dart.src__widgets__container;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const image$ = packages__flutter__src__widgets__widget_span$46dart.src__widgets__image;
+  const ticker_provider = packages__flutter__src__widgets__widget_span$46dart.src__widgets__ticker_provider;
+  const tab_controller = packages__flutter__src__material__tab_controller$46dart.src__material__tab_controller;
+  const Menu = packages__goodcoffee__Modelo__Menu$46dart.Modelo__Menu;
+  const ResponsiveApp = packages__goodcoffee__Values__EdgeInsetsApp$46dart.Values__ResponsiveApp;
+  const tabs = packages__flutter__src__material__icon_button$46dart.src__material__tabs;
+  const theme = packages__flutter__src__material__icon_button$46dart.src__material__theme;
+  const ProductListView = packages__goodcoffee__Widgets__Components__ProductListView$46dart.Widgets__Components__ProductListView;
+  const Product = packages__goodcoffee__Modelo__Product$46dart.Modelo__Product;
+  const box_fit = packages__flutter__src__painting__box_fit$46dart.src__painting__box_fit;
+  var MenuTap = Object.create(dart.library);
+  var $length = dartx.length;
+  var $_get = dartx._get;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    doubleN: () => (T.doubleN = dart.constFn(dart.nullable(core.double)))(),
+    VoidToNull: () => (T.VoidToNull = dart.constFn(dart.fnType(core.Null, [])))(),
+    intL: () => (T.intL = dart.constFn(dart.legacy(core.int)))(),
+    intLToNull: () => (T.intLToNull = dart.constFn(dart.fnType(core.Null, [T.intL()])))(),
+    WidgetL: () => (T.WidgetL = dart.constFn(dart.legacy(framework.Widget)))(),
+    ListOfWidgetL: () => (T.ListOfWidgetL = dart.constFn(core.List$(T.WidgetL())))(),
+    intLToWidgetL: () => (T.intLToWidgetL = dart.constFn(dart.fnType(T.WidgetL(), [T.intL()])))(),
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    JSArrayOfWidgetL: () => (T.JSArrayOfWidgetL = dart.constFn(_interceptors.JSArray$(T.WidgetL())))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onTap",
+        [_Location_column]: 17,
+        [_Location_line]: 33,
+        [_Location_file]: null
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "controller",
+        [_Location_column]: 17,
+        [_Location_line]: 38,
+        [_Location_file]: null
+      });
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "tabs",
+        [_Location_column]: 17,
+        [_Location_line]: 39,
+        [_Location_file]: null
+      });
+    },
+    get C1() {
+      return C[1] = dart.constList([C[2] || CT.C2, C[3] || CT.C3, C[4] || CT.C4], T._LocationL());
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 32,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Widgets/MobileComponents/MenuTap.dart"
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "list",
+        [_Location_column]: 35,
+        [_Location_line]: 49,
+        [_Location_file]: null
+      });
+    },
+    get C6() {
+      return C[6] = dart.constList([C[7] || CT.C7], T._LocationL());
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[6] || CT.C6,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 49,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Widgets/MobileComponents/MenuTap.dart"
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "list",
+        [_Location_column]: 35,
+        [_Location_line]: 50,
+        [_Location_file]: null
+      });
+    },
+    get C9() {
+      return C[9] = dart.constList([C[10] || CT.C10], T._LocationL());
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[9] || CT.C9,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 50,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Widgets/MobileComponents/MenuTap.dart"
+      });
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "list",
+        [_Location_column]: 35,
+        [_Location_line]: 51,
+        [_Location_file]: null
+      });
+    },
+    get C12() {
+      return C[12] = dart.constList([C[13] || CT.C13], T._LocationL());
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[12] || CT.C12,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 51,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Widgets/MobileComponents/MenuTap.dart"
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "list",
+        [_Location_column]: 35,
+        [_Location_line]: 52,
+        [_Location_file]: null
+      });
+    },
+    get C15() {
+      return C[15] = dart.constList([C[16] || CT.C16], T._LocationL());
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[15] || CT.C15,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 52,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Widgets/MobileComponents/MenuTap.dart"
+      });
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "controller",
+        [_Location_column]: 17,
+        [_Location_line]: 47,
+        [_Location_file]: null
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 17,
+        [_Location_line]: 48,
+        [_Location_file]: null
+      });
+    },
+    get C18() {
+      return C[18] = dart.constList([C[19] || CT.C19, C[20] || CT.C20], T._LocationL());
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[18] || CT.C18,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 46,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Widgets/MobileComponents/MenuTap.dart"
+      });
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 46,
+        [_Location_file]: null
+      });
+    },
+    get C22() {
+      return C[22] = dart.constList([C[23] || CT.C23], T._LocationL());
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[22] || CT.C22,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 45,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Widgets/MobileComponents/MenuTap.dart"
+      });
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 11,
+        [_Location_line]: 31,
+        [_Location_file]: null
+      });
+    },
+    get C25() {
+      return C[25] = dart.constList([C[26] || CT.C26], T._LocationL());
+    },
+    get C24() {
+      return C[24] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[25] || CT.C25,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 30,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Widgets/MobileComponents/MenuTap.dart"
+      });
+    },
+    get C29() {
+      return C[29] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 9,
+        [_Location_line]: 29,
+        [_Location_file]: null
+      });
+    },
+    get C30() {
+      return C[30] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 30,
+        [_Location_file]: null
+      });
+    },
+    get C28() {
+      return C[28] = dart.constList([C[29] || CT.C29, C[30] || CT.C30], T._LocationL());
+    },
+    get C27() {
+      return C[27] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[28] || CT.C28,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 28,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Widgets/MobileComponents/MenuTap.dart"
+      });
+    },
+    get C33() {
+      return C[33] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 7,
+        [_Location_line]: 27,
+        [_Location_file]: null
+      });
+    },
+    get C34() {
+      return C[34] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 28,
+        [_Location_file]: null
+      });
+    },
+    get C32() {
+      return C[32] = dart.constList([C[33] || CT.C33, C[34] || CT.C34], T._LocationL());
+    },
+    get C31() {
+      return C[31] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[32] || CT.C32,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 26,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Widgets/MobileComponents/MenuTap.dart"
+      });
+    },
+    get C37() {
+      return C[37] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "name",
+        [_Location_column]: 9,
+        [_Location_line]: 66,
+        [_Location_file]: null
+      });
+    },
+    get C38() {
+      return C[38] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 9,
+        [_Location_line]: 67,
+        [_Location_file]: null
+      });
+    },
+    get C39() {
+      return C[39] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "fit",
+        [_Location_column]: 9,
+        [_Location_line]: 68,
+        [_Location_file]: null
+      });
+    },
+    get C40() {
+      return C[40] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 9,
+        [_Location_line]: 69,
+        [_Location_file]: null
+      });
+    },
+    get C36() {
+      return C[36] = dart.constList([C[37] || CT.C37, C[38] || CT.C38, C[39] || CT.C39, C[40] || CT.C40], T._LocationL());
+    },
+    get C35() {
+      return C[35] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[36] || CT.C36,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 65,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Widgets/MobileComponents/MenuTap.dart"
+      });
+    },
+    get C43() {
+      return C[43] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "text",
+        [_Location_column]: 7,
+        [_Location_line]: 64,
+        [_Location_file]: null
+      });
+    },
+    get C44() {
+      return C[44] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 7,
+        [_Location_line]: 65,
+        [_Location_file]: null
+      });
+    },
+    get C42() {
+      return C[42] = dart.constList([C[43] || CT.C43, C[44] || CT.C44], T._LocationL());
+    },
+    get C41() {
+      return C[41] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[42] || CT.C42,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 63,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Widgets/MobileComponents/MenuTap.dart"
+      });
+    }
+  }, false);
+  var C = Array(45).fill(void 0);
+  var I = ["package:goodcoffee/Widgets/MobileComponents/MenuTap.dart"];
+  MenuTap.MenuTap = class MenuTap$ extends framework.StatefulWidget {
+    createState() {
+      return new MenuTap.MenuTapState.new();
+    }
+  };
+  (MenuTap.MenuTap.new = function(opts) {
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    MenuTap.MenuTap.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = MenuTap.MenuTap.prototype;
+  dart.addTypeTests(MenuTap.MenuTap);
+  dart.addTypeCaches(MenuTap.MenuTap);
+  dart.setMethodSignature(MenuTap.MenuTap, () => ({
+    __proto__: dart.getMethods(MenuTap.MenuTap.__proto__),
+    createState: dart.fnType(dart.legacy(framework.State$(dart.legacy(framework.StatefulWidget))), [])
+  }));
+  dart.setLibraryUri(MenuTap.MenuTap, I[0]);
+  var responsiveApp = dart.privateName(MenuTap, "MenuTapState.responsiveApp");
+  var _controller = dart.privateName(MenuTap, "_controller");
+  var _selectedIndex = dart.privateName(MenuTap, "_selectedIndex");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  const State_TickerProviderStateMixin$36 = class State_TickerProviderStateMixin extends framework.State$(dart.legacy(MenuTap.MenuTap)) {};
+  (State_TickerProviderStateMixin$36.new = function() {
+    ticker_provider.TickerProviderStateMixin$(dart.legacy(MenuTap.MenuTap))[dart.mixinNew].call(this);
+    State_TickerProviderStateMixin$36.__proto__.new.call(this);
+  }).prototype = State_TickerProviderStateMixin$36.prototype;
+  dart.applyMixin(State_TickerProviderStateMixin$36, ticker_provider.TickerProviderStateMixin$(dart.legacy(MenuTap.MenuTap)));
+  MenuTap.MenuTapState = class MenuTapState extends State_TickerProviderStateMixin$36 {
+    get responsiveApp() {
+      return this[responsiveApp];
+    }
+    set responsiveApp(value) {
+      this[responsiveApp] = value;
+    }
+    initState() {
+      this[_controller] = new tab_controller.TabController.new({length: Menu.menu[$length], vsync: this});
+    }
+    build(context) {
+      this.responsiveApp = new ResponsiveApp.ResponsiveApp.new(context);
+      return new container.Container.new({height: T.doubleN().as(this.responsiveApp.menuTabContainerHeight), child: new basic.Padding.new({padding: this.responsiveApp.edgeInsetsApp.allLargeEdgeInsets, child: new basic.Column.new({children: T.JSArrayOfWidgetL().of([new tabs.TabBar.new({onTap: dart.fn(index => {
+                  this.setState(dart.fn(() => {
+                    this[_selectedIndex] = index;
+                  }, T.VoidToNull()));
+                }, T.intLToNull()), controller: this[_controller], tabs: T.ListOfWidgetL().generate(Menu.menu[$length], dart.fn(index => T.WidgetL().as(this.createTab(index, Menu.menu[$_get](index).title, Menu.menu[$_get](index).image, context)), T.intLToWidgetL())), $creationLocationd_0dea112b090073317d4: C[0] || CT.C0}), new basic.Expanded.new({child: new tabs.TabBarView.new({controller: this[_controller], children: T.JSArrayOfWidgetL().of([new ProductListView.ProductListView.new(Product.coffeesList, {$creationLocationd_0dea112b090073317d4: C[5] || CT.C5}), new ProductListView.ProductListView.new(Product.drinksList, {$creationLocationd_0dea112b090073317d4: C[8] || CT.C8}), new ProductListView.ProductListView.new(Product.cakesList, {$creationLocationd_0dea112b090073317d4: C[11] || CT.C11}), new ProductListView.ProductListView.new(Product.sandwichesList, {$creationLocationd_0dea112b090073317d4: C[14] || CT.C14})]), $creationLocationd_0dea112b090073317d4: C[17] || CT.C17}), $creationLocationd_0dea112b090073317d4: C[21] || CT.C21})]), $creationLocationd_0dea112b090073317d4: C[24] || CT.C24}), $creationLocationd_0dea112b090073317d4: C[27] || CT.C27}), $creationLocationd_0dea112b090073317d4: C[31] || CT.C31});
+    }
+    createTab(index, text, image, context) {
+      return new tabs.Tab.new({text: text, icon: new image$.Image.asset(image, {color: this[_selectedIndex] == index ? theme.Theme.of(context).iconTheme.color : theme.Theme.of(context).unselectedWidgetColor, fit: box_fit.BoxFit.fill, height: T.doubleN().as(this.responsiveApp.tabImageHeight), $creationLocationd_0dea112b090073317d4: C[35] || CT.C35}), $creationLocationd_0dea112b090073317d4: C[41] || CT.C41});
+    }
+  };
+  (MenuTap.MenuTapState.new = function() {
+    this[_controller] = null;
+    this[responsiveApp] = null;
+    this[_selectedIndex] = 0;
+    MenuTap.MenuTapState.__proto__.new.call(this);
+    ;
+  }).prototype = MenuTap.MenuTapState.prototype;
+  dart.addTypeTests(MenuTap.MenuTapState);
+  dart.addTypeCaches(MenuTap.MenuTapState);
+  dart.setMethodSignature(MenuTap.MenuTapState, () => ({
+    __proto__: dart.getMethods(MenuTap.MenuTapState.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)]),
+    createTab: dart.fnType(dart.dynamic, [dart.legacy(core.int), dart.legacy(core.String), dart.legacy(core.String), dart.legacy(framework.BuildContext)])
+  }));
+  dart.setLibraryUri(MenuTap.MenuTapState, I[0]);
+  dart.setFieldSignature(MenuTap.MenuTapState, () => ({
+    __proto__: dart.getFields(MenuTap.MenuTapState.__proto__),
+    [_controller]: dart.fieldType(dart.legacy(tab_controller.TabController)),
+    responsiveApp: dart.fieldType(dart.legacy(ResponsiveApp.ResponsiveApp)),
+    [_selectedIndex]: dart.fieldType(dart.legacy(core.int))
+  }));
+  dart.trackLibraries("packages/goodcoffee/Widgets/MobileComponents/MenuTap.dart", {
+    "package:goodcoffee/Widgets/MobileComponents/MenuTap.dart": MenuTap
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["MenuTap.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAQyC;IAAc;;;;;;EACvD;;;;;;;;;;;;;;;;;;;;;;;IAIgB;;;;;;;AAMiD,MAA7D,oBAAc,8CAAsB,AAAK,2BAAe;IAC1D;UAG0B;AACY,MAApC,qBAAc,oCAAc,OAAO;AACnC,YAAO,qDACG,AAAc,mDACf,gCACI,AAAc,AAAc,4DAC9B,gCACa,yBAChB,4BACW,QAAC;AAGJ,kBAFF,cAAS;AACa,oBAApB,uBAAe,KAAK;;gDAGZ,yBACD,2BACP,AAAK,oBAAQ,QAAC,wBAAU,eAAU,KAAK,EACvC,AAAI,AAAQ,iBAAP,KAAK,SACV,AAAI,AAAQ,iBAAP,KAAK,SACV,OAAO,kFAEf,+BACS,qCACO,6BACM,yBAChB,wCAAgB,+EAChB,wCAAgB,8EAChB,wCAAgB,+EAChB,wCAAgB;IAQhC;cAEc,OAAa,MAAa,OAAmB;AACzD,YAAO,yBACC,IAAI,QACE,uBACV,KAAK,UACE,AAAc,wBAAE,KAAK,GAAO,AAAY,AAAU,eAAnB,OAAO,oBAAwB,AAAY,eAAT,OAAO,8BACnE,4CACJ,AAAc;IAG5B;;;IA3Dc;IACA;IACV,uBAAe;;;EA0DrB","file":"../../../../../packages/goodcoffee/Widgets/MobileComponents/MenuTap.dart.lib.js"}');
+  // Exports:
+  return {
+    Widgets__MobileComponents__MenuTap: MenuTap
+  };
+}));
+
+//# sourceMappingURL=MenuTap.dart.lib.js.map

@@ -1,0 +1,461 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/scroll_to_index/scroll_to_index.dart', 'packages/flutter/src/painting/basic_types.dart', 'packages/goodcoffee/Values/EdgeInsetsApp.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/goodcoffee/Util/Keys.dart', 'packages/flutter/src/widgets/icon.dart', 'packages/flutter/src/material/icons.dart', 'packages/goodcoffee/Util/SizingInfo.dart', 'packages/goodcoffee/Widgets/MobileComponents/ShopAppBar.dart', 'packages/goodcoffee/Widgets/WebComponents/Header/Header.dart', 'packages/goodcoffee/Widgets/MobileComponents/ShopDrawer.dart', 'packages/flutter/src/widgets/scroll_view.dart', 'packages/goodcoffee/Widgets/Components/Carousel.dart', 'packages/goodcoffee/Widgets/MobileComponents/MenuTap.dart', 'packages/goodcoffee/Widgets/WebComponents/Body/SectionList.dart', 'packages/goodcoffee/Widgets/WebComponents/Footer/Footer.dart'], (function load__packages__goodcoffee__Pages__HomaPage_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__scroll_to_index__scroll_to_index$46dart, packages__flutter__src__painting__basic_types$46dart, packages__goodcoffee__Values__EdgeInsetsApp$46dart, packages__flutter__src__material__icon_button$46dart, packages__goodcoffee__Util__Keys$46dart, packages__flutter__src__widgets__icon$46dart, packages__flutter__src__material__icons$46dart, packages__goodcoffee__Util__SizingInfo$46dart, packages__goodcoffee__Widgets__MobileComponents__ShopAppBar$46dart, packages__goodcoffee__Widgets__WebComponents__Header__Header$46dart, packages__goodcoffee__Widgets__MobileComponents__ShopDrawer$46dart, packages__flutter__src__widgets__scroll_view$46dart, packages__goodcoffee__Widgets__Components__Carousel$46dart, packages__goodcoffee__Widgets__MobileComponents__MenuTap$46dart, packages__goodcoffee__Widgets__WebComponents__Body__SectionList$46dart, packages__goodcoffee__Widgets__WebComponents__Footer__Footer$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const ui = dart_sdk.ui;
+  const collection = dart_sdk.collection;
+  const async = dart_sdk.async;
+  const _interceptors = dart_sdk._interceptors;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const media_query = packages__flutter__src__widgets__widget_span$46dart.src__widgets__media_query;
+  const visibility = packages__flutter__src__widgets__widget_span$46dart.src__widgets__visibility;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const scroll_to_index = packages__scroll_to_index__scroll_to_index$46dart.scroll_to_index;
+  const basic_types = packages__flutter__src__painting__basic_types$46dart.src__painting__basic_types;
+  const ResponsiveApp = packages__goodcoffee__Values__EdgeInsetsApp$46dart.Values__ResponsiveApp;
+  const scaffold = packages__flutter__src__material__icon_button$46dart.src__material__scaffold;
+  const theme = packages__flutter__src__material__icon_button$46dart.src__material__theme;
+  const floating_action_button = packages__flutter__src__material__icon_button$46dart.src__material__floating_action_button;
+  const Keys = packages__goodcoffee__Util__Keys$46dart.Util__Keys;
+  const icon = packages__flutter__src__widgets__icon$46dart.src__widgets__icon;
+  const icons = packages__flutter__src__material__icons$46dart.src__material__icons;
+  const SizingInfo = packages__goodcoffee__Util__SizingInfo$46dart.Util__SizingInfo;
+  const ShopAppBar = packages__goodcoffee__Widgets__MobileComponents__ShopAppBar$46dart.Widgets__MobileComponents__ShopAppBar;
+  const Header = packages__goodcoffee__Widgets__WebComponents__Header__Header$46dart.Widgets__WebComponents__Header__Header;
+  const ShopDrawer = packages__goodcoffee__Widgets__MobileComponents__ShopDrawer$46dart.Widgets__MobileComponents__ShopDrawer;
+  const scroll_view = packages__flutter__src__widgets__scroll_view$46dart.src__widgets__scroll_view;
+  const Carousel = packages__goodcoffee__Widgets__Components__Carousel$46dart.Widgets__Components__Carousel;
+  const MenuTap = packages__goodcoffee__Widgets__MobileComponents__MenuTap$46dart.Widgets__MobileComponents__MenuTap;
+  const SectionList = packages__goodcoffee__Widgets__WebComponents__Body__SectionList$46dart.Widgets__WebComponents__Body__SectionList;
+  const Footer = packages__goodcoffee__Widgets__WebComponents__Footer__Footer$46dart.Widgets__WebComponents__Footer__Footer;
+  var HomaPage = Object.create(dart.library);
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    VoidToNull: () => (T.VoidToNull = dart.constFn(dart.fnType(core.Null, [])))(),
+    RectL: () => (T.RectL = dart.constFn(dart.legacy(ui.Rect)))(),
+    VoidToRectL: () => (T.VoidToRectL = dart.constFn(dart.fnType(T.RectL(), [])))(),
+    numL: () => (T.numL = dart.constFn(dart.legacy(core.num)))(),
+    FutureL: () => (T.FutureL = dart.constFn(dart.legacy(async.Future)))(),
+    LinkedHashSetOfFutureL: () => (T.LinkedHashSetOfFutureL = dart.constFn(collection.LinkedHashSet$(T.FutureL())))(),
+    SetOfFutureL: () => (T.SetOfFutureL = dart.constFn(core.Set$(T.FutureL())))(),
+    SetLOfFutureL: () => (T.SetLOfFutureL = dart.constFn(dart.legacy(T.SetOfFutureL())))(),
+    VoidToSetLOfFutureL: () => (T.VoidToSetLOfFutureL = dart.constFn(dart.fnType(T.SetLOfFutureL(), [])))(),
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    WidgetL: () => (T.WidgetL = dart.constFn(dart.legacy(framework.Widget)))(),
+    JSArrayOfWidgetL: () => (T.JSArrayOfWidgetL = dart.constFn(_interceptors.JSArray$(T.WidgetL())))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 32,
+        [_Location_line]: 66,
+        [_Location_file]: null
+      });
+    },
+    get C1() {
+      return C[1] = dart.constList([C[2] || CT.C2], T._LocationL());
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 21,
+        [_Location_line]: 66,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Pages/HomaPage.dart"
+      });
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onPressed",
+        [_Location_column]: 13,
+        [_Location_line]: 64,
+        [_Location_file]: null
+      });
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 13,
+        [_Location_line]: 66,
+        [_Location_file]: null
+      });
+    },
+    get C4() {
+      return C[4] = dart.constList([C[5] || CT.C5, C[6] || CT.C6], T._LocationL());
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[4] || CT.C4,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 63,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Pages/HomaPage.dart"
+      });
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "visible",
+        [_Location_column]: 11,
+        [_Location_line]: 62,
+        [_Location_file]: null
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 11,
+        [_Location_line]: 63,
+        [_Location_file]: null
+      });
+    },
+    get C8() {
+      return C[8] = dart.constList([C[9] || CT.C9, C[10] || CT.C10], T._LocationL());
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[8] || CT.C8,
+        [_Location_name]: null,
+        [_Location_column]: 31,
+        [_Location_line]: 61,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Pages/HomaPage.dart"
+      });
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "opacity",
+        [_Location_column]: 26,
+        [_Location_line]: 71,
+        [_Location_file]: null
+      });
+    },
+    get C12() {
+      return C[12] = dart.constList([C[13] || CT.C13], T._LocationL());
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[12] || CT.C12,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 71,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Pages/HomaPage.dart"
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "opacity",
+        [_Location_column]: 22,
+        [_Location_line]: 72,
+        [_Location_file]: null
+      });
+    },
+    get C15() {
+      return C[15] = dart.constList([C[16] || CT.C16], T._LocationL());
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[15] || CT.C15,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 72,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Pages/HomaPage.dart"
+      });
+    },
+    get C18() {
+      return C[18] = dart.constList([], T._LocationL());
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[18] || CT.C18,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 73,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Pages/HomaPage.dart"
+      });
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[18] || CT.C18,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 75,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Pages/HomaPage.dart"
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[18] || CT.C18,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 77,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Pages/HomaPage.dart"
+      });
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "autoScrollController",
+        [_Location_column]: 33,
+        [_Location_line]: 78,
+        [_Location_file]: null
+      });
+    },
+    get C22() {
+      return C[22] = dart.constList([C[23] || CT.C23], T._LocationL());
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[22] || CT.C22,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 78,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Pages/HomaPage.dart"
+      });
+    },
+    get C24() {
+      return C[24] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[18] || CT.C18,
+        [_Location_name]: null,
+        [_Location_column]: 49,
+        [_Location_line]: 79,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Pages/HomaPage.dart"
+      });
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[18] || CT.C18,
+        [_Location_name]: null,
+        [_Location_column]: 60,
+        [_Location_line]: 79,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Pages/HomaPage.dart"
+      });
+    },
+    get C28() {
+      return C[28] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "controller",
+        [_Location_column]: 24,
+        [_Location_line]: 74,
+        [_Location_file]: null
+      });
+    },
+    get C29() {
+      return C[29] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 58,
+        [_Location_line]: 74,
+        [_Location_file]: null
+      });
+    },
+    get C27() {
+      return C[27] = dart.constList([C[28] || CT.C28, C[29] || CT.C29], T._LocationL());
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[27] || CT.C27,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 74,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Pages/HomaPage.dart"
+      });
+    },
+    get C32() {
+      return C[32] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "key",
+        [_Location_column]: 9,
+        [_Location_line]: 59,
+        [_Location_file]: null
+      });
+    },
+    get C33() {
+      return C[33] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "backgroundColor",
+        [_Location_column]: 9,
+        [_Location_line]: 60,
+        [_Location_file]: null
+      });
+    },
+    get C34() {
+      return C[34] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "floatingActionButton",
+        [_Location_column]: 9,
+        [_Location_line]: 61,
+        [_Location_file]: null
+      });
+    },
+    get C35() {
+      return C[35] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "appBar",
+        [_Location_column]: 9,
+        [_Location_line]: 69,
+        [_Location_file]: null
+      });
+    },
+    get C36() {
+      return C[36] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "drawer",
+        [_Location_column]: 9,
+        [_Location_line]: 73,
+        [_Location_file]: null
+      });
+    },
+    get C37() {
+      return C[37] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "body",
+        [_Location_column]: 9,
+        [_Location_line]: 74,
+        [_Location_file]: null
+      });
+    },
+    get C31() {
+      return C[31] = dart.constList([C[32] || CT.C32, C[33] || CT.C33, C[34] || CT.C34, C[35] || CT.C35, C[36] || CT.C36, C[37] || CT.C37], T._LocationL());
+    },
+    get C30() {
+      return C[30] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[31] || CT.C31,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 58,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Pages/HomaPage.dart"
+      });
+    }
+  }, false);
+  var C = Array(38).fill(void 0);
+  var I = ["package:goodcoffee/Pages/HomaPage.dart"];
+  HomaPage.HomePage = class HomePage extends framework.StatefulWidget {
+    createState() {
+      return new HomaPage._HomePageState.new();
+    }
+  };
+  (HomaPage.HomePage.new = function(opts) {
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    HomaPage.HomePage.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = HomaPage.HomePage.prototype;
+  dart.addTypeTests(HomaPage.HomePage);
+  dart.addTypeCaches(HomaPage.HomePage);
+  dart.setMethodSignature(HomaPage.HomePage, () => ({
+    __proto__: dart.getMethods(HomaPage.HomePage.__proto__),
+    createState: dart.fnType(dart.legacy(HomaPage._HomePageState), [])
+  }));
+  dart.setLibraryUri(HomaPage.HomePage, I[0]);
+  var _scrollPosition = dart.privateName(HomaPage, "_scrollPosition");
+  var _opacity = dart.privateName(HomaPage, "_opacity");
+  var _isVisible = dart.privateName(HomaPage, "_isVisible");
+  var _scrollListener = dart.privateName(HomaPage, "_scrollListener");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  HomaPage._HomePageState = class _HomePageState extends framework.State$(dart.legacy(HomaPage.HomePage)) {
+    [_scrollListener]() {
+      this.setState(dart.fn(() => {
+        this[_scrollPosition] = this.autoScrollController.position.pixels;
+      }, T.VoidToNull()));
+    }
+    initState() {
+      this.autoScrollController = scroll_to_index.AutoScrollController.new({viewportBoundaryGetter: dart.fn(() => new ui.Rect.fromLTRB(0.0, 0.0, 0.0, media_query.MediaQuery.of(this.context).padding.bottom), T.VoidToRectL()), axis: basic_types.Axis.vertical});
+      this.autoScrollController.addListener(dart.bind(this, _scrollListener));
+      super.initState();
+    }
+    build(context) {
+      this.responsiveApp = new ResponsiveApp.ResponsiveApp.new(context);
+      this[_opacity] = dart.notNull(this[_scrollPosition]) < dart.notNull(T.numL().as(this.responsiveApp.opacityHeight)) ? dart.notNull(this[_scrollPosition]) / dart.notNull(T.numL().as(this.responsiveApp.opacityHeight)) : 1.0;
+      this[_isVisible] = dart.notNull(this[_scrollPosition]) >= dart.notNull(T.numL().as(this.responsiveApp.menuHeight));
+      return new scaffold.Scaffold.new({key: Keys.homeScaffoldKey, backgroundColor: theme.Theme.of(context).backgroundColor, floatingActionButton: new visibility.Visibility.new({visible: this[_isVisible], child: new floating_action_button.FloatingActionButton.new({onPressed: dart.fn(() => T.LinkedHashSetOfFutureL().from([this.autoScrollController.scrollToIndex(0)]), T.VoidToSetLOfFutureL()), child: new icon.Icon.new(icons.Icons.arrow_upward, {$creationLocationd_0dea112b090073317d4: C[0] || CT.C0}), $creationLocationd_0dea112b090073317d4: C[3] || CT.C3}), $creationLocationd_0dea112b090073317d4: C[7] || CT.C7}), appBar: dart.test(SizingInfo.isMobileAndTablet(context)) ? new ShopAppBar.ShopAppBar.new(this[_opacity], {$creationLocationd_0dea112b090073317d4: C[11] || CT.C11}) : new Header.Header.new(this[_opacity], {$creationLocationd_0dea112b090073317d4: C[14] || CT.C14}), drawer: new ShopDrawer.ShopDrawer.new({$creationLocationd_0dea112b090073317d4: C[17] || CT.C17}), body: new scroll_view.ListView.new({controller: this.autoScrollController, children: T.JSArrayOfWidgetL().of([new Carousel.Carousel.new({$creationLocationd_0dea112b090073317d4: C[19] || CT.C19}), dart.test(SizingInfo.isMobileAndTablet(context)) ? new MenuTap.MenuTap.new({$creationLocationd_0dea112b090073317d4: C[20] || CT.C20}) : new SectionList.SectionListView.new(this.autoScrollController, {$creationLocationd_0dea112b090073317d4: C[21] || CT.C21}), dart.test(SizingInfo.isMobileAndTablet(context)) ? new basic.SizedBox.shrink({$creationLocationd_0dea112b090073317d4: C[24] || CT.C24}) : new Footer.Footer.new({$creationLocationd_0dea112b090073317d4: C[25] || CT.C25})]), $creationLocationd_0dea112b090073317d4: C[26] || CT.C26}), $creationLocationd_0dea112b090073317d4: C[30] || CT.C30});
+    }
+  };
+  (HomaPage._HomePageState.new = function() {
+    this[_scrollPosition] = 0.0;
+    this[_opacity] = 0.0;
+    this.autoScrollController = null;
+    this[_isVisible] = false;
+    this.responsiveApp = null;
+    HomaPage._HomePageState.__proto__.new.call(this);
+    ;
+  }).prototype = HomaPage._HomePageState.prototype;
+  dart.addTypeTests(HomaPage._HomePageState);
+  dart.addTypeCaches(HomaPage._HomePageState);
+  dart.setMethodSignature(HomaPage._HomePageState, () => ({
+    __proto__: dart.getMethods(HomaPage._HomePageState.__proto__),
+    [_scrollListener]: dart.fnType(dart.dynamic, []),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+  }));
+  dart.setLibraryUri(HomaPage._HomePageState, I[0]);
+  dart.setFieldSignature(HomaPage._HomePageState, () => ({
+    __proto__: dart.getFields(HomaPage._HomePageState.__proto__),
+    [_scrollPosition]: dart.fieldType(dart.legacy(core.double)),
+    [_opacity]: dart.fieldType(dart.legacy(core.double)),
+    autoScrollController: dart.fieldType(dart.legacy(scroll_to_index.AutoScrollController)),
+    [_isVisible]: dart.fieldType(dart.legacy(core.bool)),
+    responsiveApp: dart.fieldType(dart.legacy(ResponsiveApp.ResponsiveApp))
+  }));
+  dart.trackLibraries("packages/goodcoffee/Pages/HomaPage.dart", {
+    "package:goodcoffee/Pages/HomaPage.dart": HomaPage
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["HomaPage.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAiBkC;IAAgB;;;;;;EAClD;;;;;;;;;;;;;;;;;;;AAaM,MAFF,cAAS;AAC+C,QAAtD,wBAAkB,AAAqB,AAAS;;IAEpD;;AAS0B,MAJxB,4BAAuB,kEAEK,cACf,qBAAS,KAAG,KAAG,KAAc,AAAY,AAAQ,0BAAjB,uDAC9B;AAEkC,MAAjD,AAAqB,gDAAY;AAChB,MAAX;IACR;UAI0B;AACY,MAApC,qBAAc,oCAAc,OAAO;AAI5B,MAFP,iBAA2B,aAAhB,kDAAkB,AAAc,qCACrB,aAAhB,kDAAkB,AAAc,qCAChC;AAEkD,MAAxD,mBAA6B,aAAhB,mDAAmB,AAAc;AAC9C,YAAO,iCACE,uCACkB,AAAY,eAAT,OAAO,yCACX,wCACX,yBACF,gEACM,cAAM,iCACf,AAAqB,wCAAc,uCAC7B,kBAAW,wNAIzB,6BAAkB,OAAO,KACjB,8BAAW,6EACX,sBAAO,oFACL,gGACF,0CAAqB,qCAAgC,yBACzD,gGACD,6BAAkB,OAAO,KAClB,qFACA,oCAAgB,iGACtB,6BAAkB,OAAO,KAAa,uFAAW;IAEzD;;;IA3DO,wBAAkB;IAClB,iBAAW;IAEG;IAChB,mBAAa;IACJ;;;EAuDhB","file":"../../../../packages/goodcoffee/Pages/HomaPage.dart.lib.js"}');
+  // Exports:
+  return {
+    Pages__HomaPage: HomaPage
+  };
+}));
+
+//# sourceMappingURL=HomaPage.dart.lib.js.map

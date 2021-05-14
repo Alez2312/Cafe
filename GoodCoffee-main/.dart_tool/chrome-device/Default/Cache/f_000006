@@ -1,0 +1,502 @@
+define(['dart_sdk', 'packages/flutter/src/painting/edge_insets.dart', 'packages/flutter/src/widgets/widget_span.dart', 'packages/goodcoffee/Util/SizingInfo.dart'], (function load__packages__goodcoffee__Values__EdgeInsetsApp_dart(dart_sdk, packages__flutter__src__painting__edge_insets$46dart, packages__flutter__src__widgets__widget_span$46dart, packages__goodcoffee__Util__SizingInfo$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const edge_insets = packages__flutter__src__painting__edge_insets$46dart.src__painting__edge_insets;
+  const media_query = packages__flutter__src__widgets__widget_span$46dart.src__widgets__media_query;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const SizingInfo = packages__goodcoffee__Util__SizingInfo$46dart.Util__SizingInfo;
+  var EdgeInsetsApp = Object.create(dart.library);
+  var ResponsiveApp = Object.create(dart.library);
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    doubleL: () => (T.doubleL = dart.constFn(dart.legacy(core.double)))(),
+    numL: () => (T.numL = dart.constFn(dart.legacy(core.num)))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  var C = [];
+  var I = [
+    "package:goodcoffee/Values/EdgeInsetsApp.dart",
+    "package:goodcoffee/Values/ResponsiveApp.dart"
+  ];
+  var allSmallEdgeInsets = dart.privateName(EdgeInsetsApp, "EdgeInsetsApp.allSmallEdgeInsets");
+  var allMediumEdgeInsets = dart.privateName(EdgeInsetsApp, "EdgeInsetsApp.allMediumEdgeInsets");
+  var allLargeEdgeInsets = dart.privateName(EdgeInsetsApp, "EdgeInsetsApp.allLargeEdgeInsets");
+  var allExLargeEdgeInsets = dart.privateName(EdgeInsetsApp, "EdgeInsetsApp.allExLargeEdgeInsets");
+  var vrtSmallEdgeInsets = dart.privateName(EdgeInsetsApp, "EdgeInsetsApp.vrtSmallEdgeInsets");
+  var vrtMediumEdgeInsets = dart.privateName(EdgeInsetsApp, "EdgeInsetsApp.vrtMediumEdgeInsets");
+  var vrtLargeEdgeInsets = dart.privateName(EdgeInsetsApp, "EdgeInsetsApp.vrtLargeEdgeInsets");
+  var vrtExLargeEdgeInsets = dart.privateName(EdgeInsetsApp, "EdgeInsetsApp.vrtExLargeEdgeInsets");
+  var hrzMediumEdgeInsets = dart.privateName(EdgeInsetsApp, "EdgeInsetsApp.hrzMediumEdgeInsets");
+  var hrzSmallEdgeInsets = dart.privateName(EdgeInsetsApp, "EdgeInsetsApp.hrzSmallEdgeInsets");
+  var hrzLargeEdgeInsets = dart.privateName(EdgeInsetsApp, "EdgeInsetsApp.hrzLargeEdgeInsets");
+  var onlySmallTopEdgeInsets = dart.privateName(EdgeInsetsApp, "EdgeInsetsApp.onlySmallTopEdgeInsets");
+  var onlySmallBottomEdgeInsets = dart.privateName(EdgeInsetsApp, "EdgeInsetsApp.onlySmallBottomEdgeInsets");
+  var onlySmallRightEdgeInsets = dart.privateName(EdgeInsetsApp, "EdgeInsetsApp.onlySmallRightEdgeInsets");
+  var onlySmallLeftEdgeInsets = dart.privateName(EdgeInsetsApp, "EdgeInsetsApp.onlySmallLeftEdgeInsets");
+  var onlyMediumTopEdgeInsets = dart.privateName(EdgeInsetsApp, "EdgeInsetsApp.onlyMediumTopEdgeInsets");
+  var onlyMediumBottomEdgeInsets = dart.privateName(EdgeInsetsApp, "EdgeInsetsApp.onlyMediumBottomEdgeInsets");
+  var onlyMediumRightEdgeInsets = dart.privateName(EdgeInsetsApp, "EdgeInsetsApp.onlyMediumRightEdgeInsets");
+  var onlyMediumLeftEdgeInsets = dart.privateName(EdgeInsetsApp, "EdgeInsetsApp.onlyMediumLeftEdgeInsets");
+  var onlyLargeTopEdgeInsets = dart.privateName(EdgeInsetsApp, "EdgeInsetsApp.onlyLargeTopEdgeInsets");
+  var onlyLargeBottomEdgeInsets = dart.privateName(EdgeInsetsApp, "EdgeInsetsApp.onlyLargeBottomEdgeInsets");
+  var onlyLargeRightEdgeInsets = dart.privateName(EdgeInsetsApp, "EdgeInsetsApp.onlyLargeRightEdgeInsets");
+  var onlyLargeLeftEdgeInsets = dart.privateName(EdgeInsetsApp, "EdgeInsetsApp.onlyLargeLeftEdgeInsets");
+  var onlyExLargeTopEdgeInsets = dart.privateName(EdgeInsetsApp, "EdgeInsetsApp.onlyExLargeTopEdgeInsets");
+  var _responsiveApp$ = dart.privateName(EdgeInsetsApp, "_responsiveApp");
+  EdgeInsetsApp.EdgeInsetsApp = class EdgeInsetsApp extends core.Object {
+    get allSmallEdgeInsets() {
+      return this[allSmallEdgeInsets];
+    }
+    set allSmallEdgeInsets(value) {
+      this[allSmallEdgeInsets] = value;
+    }
+    get allMediumEdgeInsets() {
+      return this[allMediumEdgeInsets];
+    }
+    set allMediumEdgeInsets(value) {
+      this[allMediumEdgeInsets] = value;
+    }
+    get allLargeEdgeInsets() {
+      return this[allLargeEdgeInsets];
+    }
+    set allLargeEdgeInsets(value) {
+      this[allLargeEdgeInsets] = value;
+    }
+    get allExLargeEdgeInsets() {
+      return this[allExLargeEdgeInsets];
+    }
+    set allExLargeEdgeInsets(value) {
+      this[allExLargeEdgeInsets] = value;
+    }
+    get vrtSmallEdgeInsets() {
+      return this[vrtSmallEdgeInsets];
+    }
+    set vrtSmallEdgeInsets(value) {
+      this[vrtSmallEdgeInsets] = value;
+    }
+    get vrtMediumEdgeInsets() {
+      return this[vrtMediumEdgeInsets];
+    }
+    set vrtMediumEdgeInsets(value) {
+      this[vrtMediumEdgeInsets] = value;
+    }
+    get vrtLargeEdgeInsets() {
+      return this[vrtLargeEdgeInsets];
+    }
+    set vrtLargeEdgeInsets(value) {
+      this[vrtLargeEdgeInsets] = value;
+    }
+    get vrtExLargeEdgeInsets() {
+      return this[vrtExLargeEdgeInsets];
+    }
+    set vrtExLargeEdgeInsets(value) {
+      this[vrtExLargeEdgeInsets] = value;
+    }
+    get hrzMediumEdgeInsets() {
+      return this[hrzMediumEdgeInsets];
+    }
+    set hrzMediumEdgeInsets(value) {
+      this[hrzMediumEdgeInsets] = value;
+    }
+    get hrzSmallEdgeInsets() {
+      return this[hrzSmallEdgeInsets];
+    }
+    set hrzSmallEdgeInsets(value) {
+      this[hrzSmallEdgeInsets] = value;
+    }
+    get hrzLargeEdgeInsets() {
+      return this[hrzLargeEdgeInsets];
+    }
+    set hrzLargeEdgeInsets(value) {
+      this[hrzLargeEdgeInsets] = value;
+    }
+    get onlySmallTopEdgeInsets() {
+      return this[onlySmallTopEdgeInsets];
+    }
+    set onlySmallTopEdgeInsets(value) {
+      this[onlySmallTopEdgeInsets] = value;
+    }
+    get onlySmallBottomEdgeInsets() {
+      return this[onlySmallBottomEdgeInsets];
+    }
+    set onlySmallBottomEdgeInsets(value) {
+      this[onlySmallBottomEdgeInsets] = value;
+    }
+    get onlySmallRightEdgeInsets() {
+      return this[onlySmallRightEdgeInsets];
+    }
+    set onlySmallRightEdgeInsets(value) {
+      this[onlySmallRightEdgeInsets] = value;
+    }
+    get onlySmallLeftEdgeInsets() {
+      return this[onlySmallLeftEdgeInsets];
+    }
+    set onlySmallLeftEdgeInsets(value) {
+      this[onlySmallLeftEdgeInsets] = value;
+    }
+    get onlyMediumTopEdgeInsets() {
+      return this[onlyMediumTopEdgeInsets];
+    }
+    set onlyMediumTopEdgeInsets(value) {
+      this[onlyMediumTopEdgeInsets] = value;
+    }
+    get onlyMediumBottomEdgeInsets() {
+      return this[onlyMediumBottomEdgeInsets];
+    }
+    set onlyMediumBottomEdgeInsets(value) {
+      this[onlyMediumBottomEdgeInsets] = value;
+    }
+    get onlyMediumRightEdgeInsets() {
+      return this[onlyMediumRightEdgeInsets];
+    }
+    set onlyMediumRightEdgeInsets(value) {
+      this[onlyMediumRightEdgeInsets] = value;
+    }
+    get onlyMediumLeftEdgeInsets() {
+      return this[onlyMediumLeftEdgeInsets];
+    }
+    set onlyMediumLeftEdgeInsets(value) {
+      this[onlyMediumLeftEdgeInsets] = value;
+    }
+    get onlyLargeTopEdgeInsets() {
+      return this[onlyLargeTopEdgeInsets];
+    }
+    set onlyLargeTopEdgeInsets(value) {
+      this[onlyLargeTopEdgeInsets] = value;
+    }
+    get onlyLargeBottomEdgeInsets() {
+      return this[onlyLargeBottomEdgeInsets];
+    }
+    set onlyLargeBottomEdgeInsets(value) {
+      this[onlyLargeBottomEdgeInsets] = value;
+    }
+    get onlyLargeRightEdgeInsets() {
+      return this[onlyLargeRightEdgeInsets];
+    }
+    set onlyLargeRightEdgeInsets(value) {
+      this[onlyLargeRightEdgeInsets] = value;
+    }
+    get onlyLargeLeftEdgeInsets() {
+      return this[onlyLargeLeftEdgeInsets];
+    }
+    set onlyLargeLeftEdgeInsets(value) {
+      this[onlyLargeLeftEdgeInsets] = value;
+    }
+    get onlyExLargeTopEdgeInsets() {
+      return this[onlyExLargeTopEdgeInsets];
+    }
+    set onlyExLargeTopEdgeInsets(value) {
+      this[onlyExLargeTopEdgeInsets] = value;
+    }
+  };
+  (EdgeInsetsApp.EdgeInsetsApp.new = function(_responsiveApp) {
+    this[allSmallEdgeInsets] = null;
+    this[allMediumEdgeInsets] = null;
+    this[allLargeEdgeInsets] = null;
+    this[allExLargeEdgeInsets] = null;
+    this[vrtSmallEdgeInsets] = null;
+    this[vrtMediumEdgeInsets] = null;
+    this[vrtLargeEdgeInsets] = null;
+    this[vrtExLargeEdgeInsets] = null;
+    this[hrzMediumEdgeInsets] = null;
+    this[hrzSmallEdgeInsets] = null;
+    this[hrzLargeEdgeInsets] = null;
+    this[onlySmallTopEdgeInsets] = null;
+    this[onlySmallBottomEdgeInsets] = null;
+    this[onlySmallRightEdgeInsets] = null;
+    this[onlySmallLeftEdgeInsets] = null;
+    this[onlyMediumTopEdgeInsets] = null;
+    this[onlyMediumBottomEdgeInsets] = null;
+    this[onlyMediumRightEdgeInsets] = null;
+    this[onlyMediumLeftEdgeInsets] = null;
+    this[onlyLargeTopEdgeInsets] = null;
+    this[onlyLargeBottomEdgeInsets] = null;
+    this[onlyLargeRightEdgeInsets] = null;
+    this[onlyLargeLeftEdgeInsets] = null;
+    this[onlyExLargeTopEdgeInsets] = null;
+    this[_responsiveApp$] = _responsiveApp;
+    let _smallHeightEdgeInsets = T.doubleL().as(this[_responsiveApp$].setHeight(5));
+    let _smallWidthEdgeInsets = T.doubleL().as(this[_responsiveApp$].setWidth(5));
+    let _mediumHeightEdgeInsets = T.doubleL().as(this[_responsiveApp$].setHeight(10));
+    let _mediumWidthEdgeInsets = T.doubleL().as(this[_responsiveApp$].setWidth(10));
+    let _largeHeightEdgeInsets = T.doubleL().as(this[_responsiveApp$].setHeight(20));
+    let _largeWidthEdgeInsets = T.doubleL().as(this[_responsiveApp$].setWidth(20));
+    let _largeExHeightEdgeInsets = T.doubleL().as(this[_responsiveApp$].setHeight(100));
+    let _largeExWidthEdgeInsets = T.doubleL().as(this[_responsiveApp$].setWidth(100));
+    this.allSmallEdgeInsets = new edge_insets.EdgeInsets.symmetric({vertical: _smallHeightEdgeInsets, horizontal: _smallWidthEdgeInsets});
+    this.allMediumEdgeInsets = new edge_insets.EdgeInsets.symmetric({vertical: _mediumHeightEdgeInsets, horizontal: _mediumWidthEdgeInsets});
+    this.allLargeEdgeInsets = new edge_insets.EdgeInsets.symmetric({vertical: _largeHeightEdgeInsets, horizontal: _largeWidthEdgeInsets});
+    this.allExLargeEdgeInsets = new edge_insets.EdgeInsets.symmetric({vertical: _largeExHeightEdgeInsets, horizontal: _largeExWidthEdgeInsets});
+    this.vrtSmallEdgeInsets = new edge_insets.EdgeInsets.symmetric({vertical: _smallHeightEdgeInsets});
+    this.vrtMediumEdgeInsets = new edge_insets.EdgeInsets.symmetric({vertical: _mediumHeightEdgeInsets});
+    this.vrtLargeEdgeInsets = new edge_insets.EdgeInsets.symmetric({vertical: _largeHeightEdgeInsets});
+    this.vrtExLargeEdgeInsets = new edge_insets.EdgeInsets.symmetric({vertical: _largeExHeightEdgeInsets});
+    this.hrzMediumEdgeInsets = new edge_insets.EdgeInsets.symmetric({horizontal: _mediumWidthEdgeInsets});
+    this.hrzSmallEdgeInsets = new edge_insets.EdgeInsets.symmetric({horizontal: _smallWidthEdgeInsets});
+    this.hrzLargeEdgeInsets = new edge_insets.EdgeInsets.symmetric({horizontal: _largeWidthEdgeInsets});
+    this.onlySmallTopEdgeInsets = new edge_insets.EdgeInsets.only({top: _smallHeightEdgeInsets});
+    this.onlySmallBottomEdgeInsets = new edge_insets.EdgeInsets.only({bottom: _smallHeightEdgeInsets});
+    this.onlySmallRightEdgeInsets = new edge_insets.EdgeInsets.only({right: _smallWidthEdgeInsets});
+    this.onlySmallLeftEdgeInsets = new edge_insets.EdgeInsets.only({left: _smallWidthEdgeInsets});
+    this.onlyMediumTopEdgeInsets = new edge_insets.EdgeInsets.only({top: _mediumHeightEdgeInsets});
+    this.onlyMediumBottomEdgeInsets = new edge_insets.EdgeInsets.only({bottom: _mediumHeightEdgeInsets});
+    this.onlyMediumRightEdgeInsets = new edge_insets.EdgeInsets.only({right: _mediumWidthEdgeInsets});
+    this.onlyMediumLeftEdgeInsets = new edge_insets.EdgeInsets.only({left: _mediumWidthEdgeInsets});
+    this.onlyLargeTopEdgeInsets = new edge_insets.EdgeInsets.only({top: _largeHeightEdgeInsets});
+    this.onlyLargeBottomEdgeInsets = new edge_insets.EdgeInsets.only({bottom: _largeHeightEdgeInsets});
+    this.onlyLargeRightEdgeInsets = new edge_insets.EdgeInsets.only({right: _largeWidthEdgeInsets});
+    this.onlyLargeLeftEdgeInsets = new edge_insets.EdgeInsets.only({left: _largeWidthEdgeInsets});
+    this.onlyExLargeTopEdgeInsets = new edge_insets.EdgeInsets.only({top: _largeExHeightEdgeInsets});
+  }).prototype = EdgeInsetsApp.EdgeInsetsApp.prototype;
+  dart.addTypeTests(EdgeInsetsApp.EdgeInsetsApp);
+  dart.addTypeCaches(EdgeInsetsApp.EdgeInsetsApp);
+  dart.setLibraryUri(EdgeInsetsApp.EdgeInsetsApp, I[0]);
+  dart.setFieldSignature(EdgeInsetsApp.EdgeInsetsApp, () => ({
+    __proto__: dart.getFields(EdgeInsetsApp.EdgeInsetsApp.__proto__),
+    allSmallEdgeInsets: dart.fieldType(dart.legacy(edge_insets.EdgeInsets)),
+    allMediumEdgeInsets: dart.fieldType(dart.legacy(edge_insets.EdgeInsets)),
+    allLargeEdgeInsets: dart.fieldType(dart.legacy(edge_insets.EdgeInsets)),
+    allExLargeEdgeInsets: dart.fieldType(dart.legacy(edge_insets.EdgeInsets)),
+    vrtSmallEdgeInsets: dart.fieldType(dart.legacy(edge_insets.EdgeInsets)),
+    vrtMediumEdgeInsets: dart.fieldType(dart.legacy(edge_insets.EdgeInsets)),
+    vrtLargeEdgeInsets: dart.fieldType(dart.legacy(edge_insets.EdgeInsets)),
+    vrtExLargeEdgeInsets: dart.fieldType(dart.legacy(edge_insets.EdgeInsets)),
+    hrzMediumEdgeInsets: dart.fieldType(dart.legacy(edge_insets.EdgeInsets)),
+    hrzSmallEdgeInsets: dart.fieldType(dart.legacy(edge_insets.EdgeInsets)),
+    hrzLargeEdgeInsets: dart.fieldType(dart.legacy(edge_insets.EdgeInsets)),
+    onlySmallTopEdgeInsets: dart.fieldType(dart.legacy(edge_insets.EdgeInsets)),
+    onlySmallBottomEdgeInsets: dart.fieldType(dart.legacy(edge_insets.EdgeInsets)),
+    onlySmallRightEdgeInsets: dart.fieldType(dart.legacy(edge_insets.EdgeInsets)),
+    onlySmallLeftEdgeInsets: dart.fieldType(dart.legacy(edge_insets.EdgeInsets)),
+    onlyMediumTopEdgeInsets: dart.fieldType(dart.legacy(edge_insets.EdgeInsets)),
+    onlyMediumBottomEdgeInsets: dart.fieldType(dart.legacy(edge_insets.EdgeInsets)),
+    onlyMediumRightEdgeInsets: dart.fieldType(dart.legacy(edge_insets.EdgeInsets)),
+    onlyMediumLeftEdgeInsets: dart.fieldType(dart.legacy(edge_insets.EdgeInsets)),
+    onlyLargeTopEdgeInsets: dart.fieldType(dart.legacy(edge_insets.EdgeInsets)),
+    onlyLargeBottomEdgeInsets: dart.fieldType(dart.legacy(edge_insets.EdgeInsets)),
+    onlyLargeRightEdgeInsets: dart.fieldType(dart.legacy(edge_insets.EdgeInsets)),
+    onlyLargeLeftEdgeInsets: dart.fieldType(dart.legacy(edge_insets.EdgeInsets)),
+    onlyExLargeTopEdgeInsets: dart.fieldType(dart.legacy(edge_insets.EdgeInsets)),
+    [_responsiveApp$]: dart.fieldType(dart.legacy(ResponsiveApp.ResponsiveApp))
+  }));
+  var edgeInsetsApp = dart.privateName(ResponsiveApp, "ResponsiveApp.edgeInsetsApp");
+  var _mediaQueryData = dart.privateName(ResponsiveApp, "_mediaQueryData");
+  var _textScaleFactor = dart.privateName(ResponsiveApp, "_textScaleFactor");
+  var _scaleFactor = dart.privateName(ResponsiveApp, "_scaleFactor");
+  var _context$ = dart.privateName(ResponsiveApp, "_context");
+  var _scaleWidth = dart.privateName(ResponsiveApp, "_scaleWidth");
+  var _scaleHeight = dart.privateName(ResponsiveApp, "_scaleHeight");
+  ResponsiveApp.ResponsiveApp = class ResponsiveApp extends core.Object {
+    get edgeInsetsApp() {
+      return this[edgeInsetsApp];
+    }
+    set edgeInsetsApp(value) {
+      this[edgeInsetsApp] = value;
+    }
+    get menuContainerHeight() {
+      return this.setHeight(100);
+    }
+    get menuContainerWidth() {
+      return this.setWidth(110);
+    }
+    get productContainerWidth() {
+      return this.setWidth(60);
+    }
+    get carouselContainerWidth() {
+      return this.setWidth(300);
+    }
+    get carouselContainerHeight() {
+      return this.setHeight(60);
+    }
+    get carouselCircleContainerWidth() {
+      return this.setWidth(10);
+    }
+    get carouselCircleContainerHeight() {
+      return this.setHeight(10);
+    }
+    get menuTabContainerHeight() {
+      return this.setHeight(400);
+    }
+    get sectionHeight() {
+      return this.setHeight(50);
+    }
+    get sectionWidth() {
+      return this.setWidth(8);
+    }
+    get menuRadiusWidth() {
+      return this.setWidth(30);
+    }
+    get carouselRadiusWidth() {
+      return this.setWidth(10);
+    }
+    get menuImageHeight() {
+      return this.setHeight(60);
+    }
+    get menuImageWidth() {
+      return this.setWidth(50);
+    }
+    get tabImageHeight() {
+      return this.setHeight(30);
+    }
+    get menuHeight() {
+      return this.setHeight(850);
+    }
+    get opacityHeight() {
+      return this.setHeight(252);
+    }
+    get drawerWidth() {
+      return this.setWidth(252);
+    }
+    get dividerVtlHeight() {
+      return this.setHeight(100);
+    }
+    get dividerVtlWidth() {
+      return this.setWidth(2);
+    }
+    get dividerHznHeight() {
+      return this.setHeight(1);
+    }
+    get lineHznButtonHeight() {
+      return this.setHeight(2);
+    }
+    get lineHznButtonWidth() {
+      return this.setWidth(20);
+    }
+    get barSpace1Width() {
+      return this.setWidth(60);
+    }
+    get barSpace2Width() {
+      return this.setWidth(80);
+    }
+    get bodyText1() {
+      return this.setSp(12);
+    }
+    get headline6() {
+      return this.setSp(15);
+    }
+    get headline3() {
+      return this.setSp(30);
+    }
+    get headline2() {
+      return this.setSp(40);
+    }
+    get letterSpacingCarouselWidth() {
+      return this.setWidth(10);
+    }
+    get letterSpacingHeaderWidth() {
+      return this.setWidth(3);
+    }
+    setWidth(width) {
+      return dart.notNull(width) * dart.notNull(T.numL().as(this[_scaleWidth]));
+    }
+    setHeight(height) {
+      return dart.notNull(height) * dart.notNull(T.numL().as(this[_scaleHeight]));
+    }
+    setSp(fontSize) {
+      return dart.dsend(this.setWidth(fontSize), '*', [this[_textScaleFactor]]);
+    }
+    get [_scaleWidth]() {
+      return dart.dsend(dart.dsend(this.width, '*', [this[_scaleFactor]]), '/', [this.width]);
+    }
+    get [_scaleHeight]() {
+      return dart.dsend(dart.dsend(this.height, '*', [this[_scaleFactor]]), '/', [this.height]);
+    }
+    get width() {
+      return this[_mediaQueryData].size.width;
+    }
+    get height() {
+      return this[_mediaQueryData].size.height;
+    }
+  };
+  (ResponsiveApp.ResponsiveApp.new = function(_context) {
+    this[_mediaQueryData] = null;
+    this[_textScaleFactor] = null;
+    this[_scaleFactor] = null;
+    this[edgeInsetsApp] = null;
+    this[_context$] = _context;
+    this[_mediaQueryData] = media_query.MediaQuery.of(this[_context$]);
+    this[_textScaleFactor] = this[_mediaQueryData].textScaleFactor;
+    this[_scaleFactor] = dart.test(SizingInfo.isMobile(this[_context$])) ? 1.0 : dart.test(SizingInfo.isTablet(this[_context$])) ? 1.1 : 1.3;
+    this.edgeInsetsApp = new EdgeInsetsApp.EdgeInsetsApp.new(this);
+  }).prototype = ResponsiveApp.ResponsiveApp.prototype;
+  dart.addTypeTests(ResponsiveApp.ResponsiveApp);
+  dart.addTypeCaches(ResponsiveApp.ResponsiveApp);
+  dart.setMethodSignature(ResponsiveApp.ResponsiveApp, () => ({
+    __proto__: dart.getMethods(ResponsiveApp.ResponsiveApp.__proto__),
+    setWidth: dart.fnType(dart.dynamic, [dart.legacy(core.int)]),
+    setHeight: dart.fnType(dart.dynamic, [dart.legacy(core.int)]),
+    setSp: dart.fnType(dart.dynamic, [dart.legacy(core.int)])
+  }));
+  dart.setGetterSignature(ResponsiveApp.ResponsiveApp, () => ({
+    __proto__: dart.getGetters(ResponsiveApp.ResponsiveApp.__proto__),
+    menuContainerHeight: dart.dynamic,
+    menuContainerWidth: dart.dynamic,
+    productContainerWidth: dart.dynamic,
+    carouselContainerWidth: dart.dynamic,
+    carouselContainerHeight: dart.dynamic,
+    carouselCircleContainerWidth: dart.dynamic,
+    carouselCircleContainerHeight: dart.dynamic,
+    menuTabContainerHeight: dart.dynamic,
+    sectionHeight: dart.dynamic,
+    sectionWidth: dart.dynamic,
+    menuRadiusWidth: dart.dynamic,
+    carouselRadiusWidth: dart.dynamic,
+    menuImageHeight: dart.dynamic,
+    menuImageWidth: dart.dynamic,
+    tabImageHeight: dart.dynamic,
+    menuHeight: dart.dynamic,
+    opacityHeight: dart.dynamic,
+    drawerWidth: dart.dynamic,
+    dividerVtlHeight: dart.dynamic,
+    dividerVtlWidth: dart.dynamic,
+    dividerHznHeight: dart.dynamic,
+    lineHznButtonHeight: dart.dynamic,
+    lineHznButtonWidth: dart.dynamic,
+    barSpace1Width: dart.dynamic,
+    barSpace2Width: dart.dynamic,
+    bodyText1: dart.dynamic,
+    headline6: dart.dynamic,
+    headline3: dart.dynamic,
+    headline2: dart.dynamic,
+    letterSpacingCarouselWidth: dart.dynamic,
+    letterSpacingHeaderWidth: dart.dynamic,
+    [_scaleWidth]: dart.dynamic,
+    [_scaleHeight]: dart.dynamic,
+    width: dart.dynamic,
+    height: dart.dynamic
+  }));
+  dart.setLibraryUri(ResponsiveApp.ResponsiveApp, I[1]);
+  dart.setFieldSignature(ResponsiveApp.ResponsiveApp, () => ({
+    __proto__: dart.getFields(ResponsiveApp.ResponsiveApp.__proto__),
+    [_context$]: dart.fieldType(dart.legacy(framework.BuildContext)),
+    [_mediaQueryData]: dart.fieldType(dart.legacy(media_query.MediaQueryData)),
+    [_textScaleFactor]: dart.fieldType(dart.legacy(core.double)),
+    [_scaleFactor]: dart.fieldType(dart.legacy(core.double)),
+    edgeInsetsApp: dart.fieldType(dart.legacy(EdgeInsetsApp.EdgeInsetsApp))
+  }));
+  dart.trackLibraries("packages/goodcoffee/Values/EdgeInsetsApp.dart", {
+    "package:goodcoffee/Values/EdgeInsetsApp.dart": EdgeInsetsApp,
+    "package:goodcoffee/Values/ResponsiveApp.dart": ResponsiveApp
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["EdgeInsetsApp.dart","ResponsiveApp.dart"],"names":[],"mappings":"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","file":"../../../../packages/goodcoffee/Values/EdgeInsetsApp.dart.lib.js"}');
+  // Exports:
+  return {
+    Values__EdgeInsetsApp: EdgeInsetsApp,
+    Values__ResponsiveApp: ResponsiveApp
+  };
+}));
+
+//# sourceMappingURL=EdgeInsetsApp.dart.lib.js.map

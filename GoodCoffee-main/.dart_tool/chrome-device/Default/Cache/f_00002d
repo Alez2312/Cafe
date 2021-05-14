@@ -1,0 +1,381 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/goodcoffee/Values/EdgeInsetsApp.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/rendering/flex.dart', 'packages/flutter/src/painting/strut_style.dart', 'packages/flutter/src/material/colors.dart'], (function load__packages__goodcoffee__Widgets__WebComponents__Header__HeaderButton_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__goodcoffee__Values__EdgeInsetsApp$46dart, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__rendering__flex$46dart, packages__flutter__src__painting__strut_style$46dart, packages__flutter__src__material__colors$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const _interceptors = dart_sdk._interceptors;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__text;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const visibility = packages__flutter__src__widgets__widget_span$46dart.src__widgets__visibility;
+  const container = packages__flutter__src__widgets__widget_span$46dart.src__widgets__container;
+  const ResponsiveApp = packages__goodcoffee__Values__EdgeInsetsApp$46dart.Values__ResponsiveApp;
+  const ink_well = packages__flutter__src__material__icon_button$46dart.src__material__ink_well;
+  const flex = packages__flutter__src__rendering__flex$46dart.src__rendering__flex;
+  const text_style = packages__flutter__src__painting__strut_style$46dart.src__painting__text_style;
+  const colors = packages__flutter__src__material__colors$46dart.src__material__colors;
+  var HeaderButton = Object.create(dart.library);
+  var $_set = dartx._set;
+  var $_get = dartx._get;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    VoidToNull: () => (T.VoidToNull = dart.constFn(dart.fnType(core.Null, [])))(),
+    boolL: () => (T.boolL = dart.constFn(dart.legacy(core.bool)))(),
+    boolLToNull: () => (T.boolLToNull = dart.constFn(dart.fnType(core.Null, [T.boolL()])))(),
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    doubleN: () => (T.doubleN = dart.constFn(dart.nullable(core.double)))(),
+    WidgetL: () => (T.WidgetL = dart.constFn(dart.legacy(framework.Widget)))(),
+    JSArrayOfWidgetL: () => (T.JSArrayOfWidgetL = dart.constFn(_interceptors.JSArray$(T.WidgetL())))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 20,
+        [_Location_line]: 47,
+        [_Location_file]: null
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 13,
+        [_Location_line]: 48,
+        [_Location_file]: null
+      });
+    },
+    get C1() {
+      return C[1] = dart.constList([C[2] || CT.C2, C[3] || CT.C3], T._LocationL());
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 46,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Widgets/WebComponents/Header/HeaderButton.dart"
+      });
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 20,
+        [_Location_line]: 54,
+        [_Location_file]: null
+      });
+    },
+    get C5() {
+      return C[5] = dart.constList([C[6] || CT.C6], T._LocationL());
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[5] || CT.C5,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 54,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Widgets/WebComponents/Header/HeaderButton.dart"
+      });
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 15,
+        [_Location_line]: 61,
+        [_Location_file]: null
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 15,
+        [_Location_line]: 62,
+        [_Location_file]: null
+      });
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 15,
+        [_Location_line]: 63,
+        [_Location_file]: null
+      });
+    },
+    get C8() {
+      return C[8] = dart.constList([C[9] || CT.C9, C[10] || CT.C10, C[11] || CT.C11], T._LocationL());
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[8] || CT.C8,
+        [_Location_name]: null,
+        [_Location_column]: 20,
+        [_Location_line]: 60,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Widgets/WebComponents/Header/HeaderButton.dart"
+      });
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "maintainAnimation",
+        [_Location_column]: 13,
+        [_Location_line]: 56,
+        [_Location_file]: null
+      });
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "maintainState",
+        [_Location_column]: 13,
+        [_Location_line]: 57,
+        [_Location_file]: null
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "maintainSize",
+        [_Location_column]: 13,
+        [_Location_line]: 58,
+        [_Location_file]: null
+      });
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "visible",
+        [_Location_column]: 13,
+        [_Location_line]: 59,
+        [_Location_file]: null
+      });
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 13,
+        [_Location_line]: 60,
+        [_Location_file]: null
+      });
+    },
+    get C13() {
+      return C[13] = dart.constList([C[14] || CT.C14, C[15] || CT.C15, C[16] || CT.C16, C[17] || CT.C17, C[18] || CT.C18], T._LocationL());
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[13] || CT.C13,
+        [_Location_name]: null,
+        [_Location_column]: 11,
+        [_Location_line]: 55,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Widgets/WebComponents/Header/HeaderButton.dart"
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisSize",
+        [_Location_column]: 9,
+        [_Location_line]: 44,
+        [_Location_file]: null
+      });
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 9,
+        [_Location_line]: 45,
+        [_Location_file]: null
+      });
+    },
+    get C20() {
+      return C[20] = dart.constList([C[21] || CT.C21, C[22] || CT.C22], T._LocationL());
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[20] || CT.C20,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 43,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Widgets/WebComponents/Header/HeaderButton.dart"
+      });
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onHover",
+        [_Location_column]: 7,
+        [_Location_line]: 35,
+        [_Location_file]: null
+      });
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onTap",
+        [_Location_column]: 7,
+        [_Location_line]: 42,
+        [_Location_file]: null
+      });
+    },
+    get C27() {
+      return C[27] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 43,
+        [_Location_file]: null
+      });
+    },
+    get C24() {
+      return C[24] = dart.constList([C[25] || CT.C25, C[26] || CT.C26, C[27] || CT.C27], T._LocationL());
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[24] || CT.C24,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 34,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Widgets/WebComponents/Header/HeaderButton.dart"
+      });
+    }
+  }, false);
+  var C = Array(28).fill(void 0);
+  var I = ["package:goodcoffee/Widgets/WebComponents/Header/HeaderButton.dart"];
+  var title$ = dart.privateName(HeaderButton, "HeaderButton.title");
+  var index$ = dart.privateName(HeaderButton, "HeaderButton.index");
+  var lineIsVisible$ = dart.privateName(HeaderButton, "HeaderButton.lineIsVisible");
+  HeaderButton.HeaderButton = class HeaderButton$ extends framework.StatefulWidget {
+    get title() {
+      return this[title$];
+    }
+    set title(value) {
+      this[title$] = value;
+    }
+    get index() {
+      return this[index$];
+    }
+    set index(value) {
+      this[index$] = value;
+    }
+    get lineIsVisible() {
+      return this[lineIsVisible$];
+    }
+    set lineIsVisible(value) {
+      this[lineIsVisible$] = value;
+    }
+    createState() {
+      return new HeaderButton._HeaderButtonState.new(this.index);
+    }
+  };
+  (HeaderButton.HeaderButton.new = function(index, title, opts) {
+    let lineIsVisible = opts && 'lineIsVisible' in opts ? opts.lineIsVisible : true;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[index$] = index;
+    this[title$] = title;
+    this[lineIsVisible$] = lineIsVisible;
+    HeaderButton.HeaderButton.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = HeaderButton.HeaderButton.prototype;
+  dart.addTypeTests(HeaderButton.HeaderButton);
+  dart.addTypeCaches(HeaderButton.HeaderButton);
+  dart.setMethodSignature(HeaderButton.HeaderButton, () => ({
+    __proto__: dart.getMethods(HeaderButton.HeaderButton.__proto__),
+    createState: dart.fnType(dart.legacy(framework.State$(dart.legacy(framework.StatefulWidget))), [])
+  }));
+  dart.setLibraryUri(HeaderButton.HeaderButton, I[0]);
+  dart.setFieldSignature(HeaderButton.HeaderButton, () => ({
+    __proto__: dart.getFields(HeaderButton.HeaderButton.__proto__),
+    title: dart.fieldType(dart.legacy(core.String)),
+    index: dart.fieldType(dart.legacy(core.int)),
+    lineIsVisible: dart.fieldType(dart.legacy(core.bool))
+  }));
+  var _isHovering = dart.privateName(HeaderButton, "_isHovering");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  HeaderButton._HeaderButtonState = class _HeaderButtonState extends framework.State$(dart.legacy(HeaderButton.HeaderButton)) {
+    build(context) {
+      this.responsiveApp = new ResponsiveApp.ResponsiveApp.new(context);
+      return new ink_well.InkWell.new({onHover: dart.fn(value => {
+          this.setState(dart.fn(() => {
+            let t2, t1, t0, t2$, t1$, t0$;
+            dart.test(value) ? (t0 = this[_isHovering], t1 = this.index, t2 = true, t0[$_set](t1, t2), t2) : (t0$ = this[_isHovering], t1$ = this.index, t2$ = false, t0$[$_set](t1$, t2$), t2$);
+          }, T.VoidToNull()));
+        }, T.boolLToNull()), onTap: dart.fn(() => {
+        }, T.VoidToNull()), child: new basic.Column.new({mainAxisSize: flex.MainAxisSize.min, children: T.JSArrayOfWidgetL().of([new text.Text.new(this.widget.title, {style: new text_style.TextStyle.new({color: dart.dtest(this[_isHovering][$_get](this.index)) ? colors.Colors.white : colors.Colors.white70}), $creationLocationd_0dea112b090073317d4: C[0] || CT.C0}), new basic.SizedBox.new({height: 5.0, $creationLocationd_0dea112b090073317d4: C[4] || CT.C4}), new visibility.Visibility.new({maintainAnimation: true, maintainState: true, maintainSize: true, visible: core.bool.as(dart.test(this.widget.lineIsVisible) ? this[_isHovering][$_get](this.index) : this.widget.lineIsVisible), child: new container.Container.new({height: T.doubleN().as(this.responsiveApp.lineHznButtonHeight), width: T.doubleN().as(this.responsiveApp.lineHznButtonWidth), color: colors.Colors.white, $creationLocationd_0dea112b090073317d4: C[7] || CT.C7}), $creationLocationd_0dea112b090073317d4: C[12] || CT.C12})]), $creationLocationd_0dea112b090073317d4: C[19] || CT.C19}), $creationLocationd_0dea112b090073317d4: C[23] || CT.C23});
+    }
+  };
+  (HeaderButton._HeaderButtonState.new = function(index) {
+    this[_isHovering] = [false, false, false];
+    this.responsiveApp = null;
+    this.index = index;
+    HeaderButton._HeaderButtonState.__proto__.new.call(this);
+    ;
+  }).prototype = HeaderButton._HeaderButtonState.prototype;
+  dart.addTypeTests(HeaderButton._HeaderButtonState);
+  dart.addTypeCaches(HeaderButton._HeaderButtonState);
+  dart.setMethodSignature(HeaderButton._HeaderButtonState, () => ({
+    __proto__: dart.getMethods(HeaderButton._HeaderButtonState.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+  }));
+  dart.setLibraryUri(HeaderButton._HeaderButtonState, I[0]);
+  dart.setFieldSignature(HeaderButton._HeaderButtonState, () => ({
+    __proto__: dart.getFields(HeaderButton._HeaderButtonState.__proto__),
+    index: dart.fieldType(dart.legacy(core.int)),
+    [_isHovering]: dart.finalFieldType(dart.legacy(core.List)),
+    responsiveApp: dart.fieldType(dart.legacy(ResponsiveApp.ResponsiveApp))
+  }));
+  dart.trackLibraries("packages/goodcoffee/Widgets/WebComponents/Header/HeaderButton.dart", {
+    "package:goodcoffee/Widgets/WebComponents/Header/HeaderButton.dart": HeaderButton
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["HeaderButton.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAKS;;;;;;IACH;;;;;;IACC;;;;;;;AAKiC,qDAAwB;IAAM;;4CAHlD,OAAW;QAAY;;IAAvB;IAAW;IAAY;AAAzC;;EAA6D;;;;;;;;;;;;;;;;;;;;;UAqBnC;AACY,MAApC,qBAAc,oCAAc,OAAO;AAEnC,YAAQ,oCACG,QAAC;AAKN,UAJF,cAAS;;AAG8B,sBAFrC,KAAK,KACY,KAAX,wBAAiB,iBAAS,MAAf,0BACA,MAAX,yBAAiB,kBAAS,OAAf;;oCAGd;mCACA,oCACsB,iCACjB,yBACR,kBACE,AAAO,2BACA,gDACE,AAAW,yBAAM,eACZ,sBACA,kFAGhB,gCAAiB,8DACjB,kDACqB,qBACJ,oBACD,eACe,uBAApB,AAAO,6BAAc,AAAW,yBAAM,cAAO,AAAO,mCACtD,oDACG,AAAc,+DACf,AAAc,+CACP;IAM1B;;kDAzCwB;IARb,oBAAc,CACvB,OACA,OACA;IAGY;IAEU;AAAxB;;EAA8B","file":"../../../../../../packages/goodcoffee/Widgets/WebComponents/Header/HeaderButton.dart.lib.js"}');
+  // Exports:
+  return {
+    Widgets__WebComponents__Header__HeaderButton: HeaderButton
+  };
+}));
+
+//# sourceMappingURL=HeaderButton.dart.lib.js.map

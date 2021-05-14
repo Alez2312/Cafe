@@ -1,0 +1,370 @@
+define(['dart_sdk', 'packages/goodcoffee/Values/EdgeInsetsApp.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/widgets/icon.dart', 'packages/flutter/src/material/icons.dart', 'packages/flutter/src/widgets/widget_span.dart', 'packages/flutter/src/material/colors.dart', 'packages/goodcoffee/Util/Keys.dart', 'packages/goodcoffee/Values/StringApp.dart', 'packages/flutter/src/painting/strut_style.dart', 'packages/flutter/src/widgets/preferred_size.dart'], (function load__packages__goodcoffee__Widgets__MobileComponents__ShopAppBar_dart(dart_sdk, packages__goodcoffee__Values__EdgeInsetsApp$46dart, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__widgets__icon$46dart, packages__flutter__src__material__icons$46dart, packages__flutter__src__widgets__widget_span$46dart, packages__flutter__src__material__colors$46dart, packages__goodcoffee__Util__Keys$46dart, packages__goodcoffee__Values__StringApp$46dart, packages__flutter__src__painting__strut_style$46dart, packages__flutter__src__widgets__preferred_size$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const ui = dart_sdk.ui;
+  const _interceptors = dart_sdk._interceptors;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const ResponsiveApp = packages__goodcoffee__Values__EdgeInsetsApp$46dart.Values__ResponsiveApp;
+  const app_bar = packages__flutter__src__material__icon_button$46dart.src__material__app_bar;
+  const theme = packages__flutter__src__material__icon_button$46dart.src__material__theme;
+  const icon_button = packages__flutter__src__material__icon_button$46dart.src__material__icon_button;
+  const icon = packages__flutter__src__widgets__icon$46dart.src__widgets__icon;
+  const icons = packages__flutter__src__material__icons$46dart.src__material__icons;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__text;
+  const colors = packages__flutter__src__material__colors$46dart.src__material__colors;
+  const Keys = packages__goodcoffee__Util__Keys$46dart.Util__Keys;
+  const StringApp = packages__goodcoffee__Values__StringApp$46dart.Values__StringApp;
+  const text_style = packages__flutter__src__painting__strut_style$46dart.src__painting__text_style;
+  const preferred_size = packages__flutter__src__widgets__preferred_size$46dart.src__widgets__preferred_size;
+  var ShopAppBar = Object.create(dart.library);
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    VoidToNull: () => (T.VoidToNull = dart.constFn(dart.fnType(core.Null, [])))(),
+    WidgetL: () => (T.WidgetL = dart.constFn(dart.legacy(framework.Widget)))(),
+    JSArrayOfWidgetL: () => (T.JSArrayOfWidgetL = dart.constFn(_interceptors.JSArray$(T.WidgetL())))(),
+    doubleN: () => (T.doubleN = dart.constFn(dart.nullable(core.double)))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 26,
+        [_Location_line]: 22,
+        [_Location_file]: null
+      });
+    },
+    get C1() {
+      return C[1] = dart.constList([C[2] || CT.C2], T._LocationL());
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 22,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Widgets/MobileComponents/ShopAppBar.dart"
+      });
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 9,
+        [_Location_line]: 22,
+        [_Location_file]: null
+      });
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "splashColor",
+        [_Location_column]: 9,
+        [_Location_line]: 23,
+        [_Location_file]: null
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "highlightColor",
+        [_Location_column]: 9,
+        [_Location_line]: 24,
+        [_Location_file]: null
+      });
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onPressed",
+        [_Location_column]: 9,
+        [_Location_line]: 25,
+        [_Location_file]: null
+      });
+    },
+    get C4() {
+      return C[4] = dart.constList([C[5] || CT.C5, C[6] || CT.C6, C[7] || CT.C7, C[8] || CT.C8], T._LocationL());
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[4] || CT.C4,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 21,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Widgets/MobileComponents/ShopAppBar.dart"
+      });
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 28,
+        [_Location_line]: 32,
+        [_Location_file]: null
+      });
+    },
+    get C10() {
+      return C[10] = dart.constList([C[11] || CT.C11], T._LocationL());
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[10] || CT.C10,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 32,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Widgets/MobileComponents/ShopAppBar.dart"
+      });
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 11,
+        [_Location_line]: 32,
+        [_Location_file]: null
+      });
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "splashColor",
+        [_Location_column]: 11,
+        [_Location_line]: 33,
+        [_Location_file]: null
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "highlightColor",
+        [_Location_column]: 11,
+        [_Location_line]: 34,
+        [_Location_file]: null
+      });
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onPressed",
+        [_Location_column]: 11,
+        [_Location_line]: 35,
+        [_Location_file]: null
+      });
+    },
+    get C13() {
+      return C[13] = dart.constList([C[14] || CT.C14, C[15] || CT.C15, C[16] || CT.C16, C[17] || CT.C17], T._LocationL());
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[13] || CT.C13,
+        [_Location_name]: null,
+        [_Location_column]: 9,
+        [_Location_line]: 31,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Widgets/MobileComponents/ShopAppBar.dart"
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 9,
+        [_Location_line]: 40,
+        [_Location_file]: null
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 9,
+        [_Location_line]: 41,
+        [_Location_file]: null
+      });
+    },
+    get C19() {
+      return C[19] = dart.constList([C[20] || CT.C20, C[21] || CT.C21], T._LocationL());
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[19] || CT.C19,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 39,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Widgets/MobileComponents/ShopAppBar.dart"
+      });
+    },
+    get C24() {
+      return C[24] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "backgroundColor",
+        [_Location_column]: 7,
+        [_Location_line]: 18,
+        [_Location_file]: null
+      });
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "elevation",
+        [_Location_column]: 7,
+        [_Location_line]: 20,
+        [_Location_file]: null
+      });
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "leading",
+        [_Location_column]: 7,
+        [_Location_line]: 21,
+        [_Location_file]: null
+      });
+    },
+    get C27() {
+      return C[27] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "centerTitle",
+        [_Location_column]: 7,
+        [_Location_line]: 29,
+        [_Location_file]: null
+      });
+    },
+    get C28() {
+      return C[28] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "actions",
+        [_Location_column]: 7,
+        [_Location_line]: 30,
+        [_Location_file]: null
+      });
+    },
+    get C29() {
+      return C[29] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "title",
+        [_Location_column]: 7,
+        [_Location_line]: 39,
+        [_Location_file]: null
+      });
+    },
+    get C23() {
+      return C[23] = dart.constList([C[24] || CT.C24, C[25] || CT.C25, C[26] || CT.C26, C[27] || CT.C27, C[28] || CT.C28, C[29] || CT.C29], T._LocationL());
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[23] || CT.C23,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 17,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Widgets/MobileComponents/ShopAppBar.dart"
+      });
+    }
+  }, false);
+  var C = Array(30).fill(void 0);
+  var I = ["package:goodcoffee/Widgets/MobileComponents/ShopAppBar.dart"];
+  var opacity$ = dart.privateName(ShopAppBar, "ShopAppBar.opacity");
+  var responsiveApp = dart.privateName(ShopAppBar, "ShopAppBar.responsiveApp");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  ShopAppBar.ShopAppBar = class ShopAppBar extends framework.StatelessWidget {
+    get opacity() {
+      return this[opacity$];
+    }
+    set opacity(value) {
+      super.opacity = value;
+    }
+    get responsiveApp() {
+      return this[responsiveApp];
+    }
+    set responsiveApp(value) {
+      this[responsiveApp] = value;
+    }
+    get preferredSize() {
+      return new ui.Size.fromHeight(56);
+    }
+    build(context) {
+      this.responsiveApp = new ResponsiveApp.ResponsiveApp.new(context);
+      return new app_bar.AppBar.new({backgroundColor: theme.Theme.of(context).primaryColor.withOpacity(this.opacity), elevation: 0.0, leading: new icon_button.IconButton.new({icon: new icon.Icon.new(icons.Icons.menu, {$creationLocationd_0dea112b090073317d4: C[0] || CT.C0}), splashColor: colors.Colors.transparent, highlightColor: colors.Colors.transparent, onPressed: dart.fn(() => {
+            Keys.homeScaffoldKey.currentState.openDrawer();
+          }, T.VoidToNull()), $creationLocationd_0dea112b090073317d4: C[3] || CT.C3}), centerTitle: true, actions: T.JSArrayOfWidgetL().of([new icon_button.IconButton.new({icon: new icon.Icon.new(icons.Icons.local_grocery_store_outlined, {$creationLocationd_0dea112b090073317d4: C[9] || CT.C9}), splashColor: colors.Colors.transparent, highlightColor: colors.Colors.transparent, onPressed: dart.fn(() => {
+            }, T.VoidToNull()), $creationLocationd_0dea112b090073317d4: C[12] || CT.C12})]), title: new text.Text.new(StringApp.shopStr, {style: new text_style.TextStyle.new({color: colors.Colors.blueGrey._get(100), fontSize: T.doubleN().as(this.responsiveApp.headline6), fontFamily: "Montserrat", fontWeight: ui.FontWeight.w400, letterSpacing: T.doubleN().as(this.responsiveApp.letterSpacingHeaderWidth)}), $creationLocationd_0dea112b090073317d4: C[18] || CT.C18}), $creationLocationd_0dea112b090073317d4: C[22] || CT.C22});
+    }
+  };
+  (ShopAppBar.ShopAppBar.new = function(opacity, opts) {
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[responsiveApp] = null;
+    this[opacity$] = opacity;
+    ShopAppBar.ShopAppBar.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = ShopAppBar.ShopAppBar.prototype;
+  dart.addTypeTests(ShopAppBar.ShopAppBar);
+  dart.addTypeCaches(ShopAppBar.ShopAppBar);
+  ShopAppBar.ShopAppBar[dart.implements] = () => [preferred_size.PreferredSizeWidget];
+  dart.setMethodSignature(ShopAppBar.ShopAppBar, () => ({
+    __proto__: dart.getMethods(ShopAppBar.ShopAppBar.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+  }));
+  dart.setGetterSignature(ShopAppBar.ShopAppBar, () => ({
+    __proto__: dart.getGetters(ShopAppBar.ShopAppBar.__proto__),
+    preferredSize: dart.legacy(ui.Size)
+  }));
+  dart.setLibraryUri(ShopAppBar.ShopAppBar, I[0]);
+  dart.setFieldSignature(ShopAppBar.ShopAppBar, () => ({
+    __proto__: dart.getFields(ShopAppBar.ShopAppBar.__proto__),
+    opacity: dart.finalFieldType(dart.legacy(core.double)),
+    responsiveApp: dart.fieldType(dart.legacy(ResponsiveApp.ResponsiveApp))
+  }));
+  dart.trackLibraries("packages/goodcoffee/Widgets/MobileComponents/ShopAppBar.dart", {
+    "package:goodcoffee/Widgets/MobileComponents/ShopAppBar.dart": ShopAppBar
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["ShopAppBar.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAOe;;;;;;IAKC;;;;;;;AAFY,YAAK;IAA0B;UAI/B;AACY,MAApC,qBAAc,oCAAc,OAAO;AACnC,YAAO,0CAEC,AAAY,AAAa,eAAtB,OAAO,2BAA2B,0BAChC,cACH,sCACA,kBAAW,yFACG,2CACG,sCACZ;AACgC,YAAzC,AAAgB,AAAa;oGAGpB,eACJ,yBACP,sCACQ,kBAAW,iHACG,2CACG,sCACZ;oGAIR,kBACL,2BACO,qCACS,AAAQ,4BAAC,+BACb,AAAc,2CACZ,0BACW,kDACR,AAAc;IAIrC;;wCAzCgB;;IAIF;IAJE;AAAhB;;EAAwB","file":"../../../../../packages/goodcoffee/Widgets/MobileComponents/ShopAppBar.dart.lib.js"}');
+  // Exports:
+  return {
+    Widgets__MobileComponents__ShopAppBar: ShopAppBar
+  };
+}));
+
+//# sourceMappingURL=ShopAppBar.dart.lib.js.map

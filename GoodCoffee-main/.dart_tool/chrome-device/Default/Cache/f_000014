@@ -1,0 +1,967 @@
+define(['dart_sdk', 'packages/flutter/src/painting/basic_types.dart', 'packages/flutter/src/widgets/widget_span.dart', 'packages/scroll_to_index/util.dart', 'packages/flutter/src/animation/curves.dart', 'packages/flutter/src/scheduler/binding.dart', 'packages/flutter/src/rendering/sliver.dart', 'packages/flutter/src/widgets/page_view.dart', 'packages/flutter/src/widgets/implicit_animations.dart', 'packages/flutter/src/painting/box_decoration.dart', 'packages/flutter/src/animation/listener_helpers.dart', 'packages/flutter/src/animation/animation_controller.dart'], (function load__packages__scroll_to_index__scroll_to_index_dart(dart_sdk, packages__flutter__src__painting__basic_types$46dart, packages__flutter__src__widgets__widget_span$46dart, packages__scroll_to_index__util$46dart, packages__flutter__src__animation__curves$46dart, packages__flutter__src__scheduler__binding$46dart, packages__flutter__src__rendering__sliver$46dart, packages__flutter__src__widgets__page_view$46dart, packages__flutter__src__widgets__implicit_animations$46dart, packages__flutter__src__painting__box_decoration$46dart, packages__flutter__src__animation__listener_helpers$46dart, packages__flutter__src__animation__animation_controller$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const ui = dart_sdk.ui;
+  const _js_helper = dart_sdk._js_helper;
+  const async = dart_sdk.async;
+  const math = dart_sdk.math;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const basic_types = packages__flutter__src__painting__basic_types$46dart.src__painting__basic_types;
+  const scroll_controller = packages__flutter__src__widgets__widget_span$46dart.src__widgets__scroll_controller;
+  const scrollable = packages__flutter__src__widgets__widget_span$46dart.src__widgets__scrollable;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const transitions = packages__flutter__src__widgets__widget_span$46dart.src__widgets__transitions;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const ticker_provider = packages__flutter__src__widgets__widget_span$46dart.src__widgets__ticker_provider;
+  const util = packages__scroll_to_index__util$46dart.util;
+  const curves = packages__flutter__src__animation__curves$46dart.src__animation__curves;
+  const binding = packages__flutter__src__scheduler__binding$46dart.src__scheduler__binding;
+  const viewport$ = packages__flutter__src__rendering__sliver$46dart.src__rendering__viewport;
+  const page_view = packages__flutter__src__widgets__page_view$46dart.src__widgets__page_view;
+  const implicit_animations = packages__flutter__src__widgets__implicit_animations$46dart.src__widgets__implicit_animations;
+  const box_decoration = packages__flutter__src__painting__box_decoration$46dart.src__painting__box_decoration;
+  const animations = packages__flutter__src__animation__listener_helpers$46dart.src__animation__animations;
+  const animation_controller = packages__flutter__src__animation__animation_controller$46dart.src__animation__animation_controller;
+  var scroll_to_index = Object.create(dart.library);
+  var $addAll = dartx.addAll;
+  var $isNotEmpty = dartx.isNotEmpty;
+  var $contains = dartx.contains;
+  var $_get = dartx._get;
+  var $isEmpty = dartx.isEmpty;
+  var $keys = dartx.keys;
+  var $toList = dartx.toList;
+  var $join = dartx.join;
+  var $compareTo = dartx.compareTo;
+  var $sort = dartx.sort;
+  var $first = dartx.first;
+  var $last = dartx.last;
+  var $abs = dartx.abs;
+  var $remove = dartx.remove;
+  var $_set = dartx._set;
+  var $containsKey = dartx.containsKey;
+  var $clear = dartx.clear;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    VoidToRect: () => (T.VoidToRect = dart.constFn(dart.fnType(ui.Rect, [])))(),
+    RectTodouble: () => (T.RectTodouble = dart.constFn(dart.fnType(core.double, [ui.Rect])))(),
+    AutoScrollTagStateOfAutoScrollTag: () => (T.AutoScrollTagStateOfAutoScrollTag = dart.constFn(scroll_to_index.AutoScrollTagState$(scroll_to_index.AutoScrollTag)))(),
+    IdentityMapOfint$AutoScrollTagStateOfAutoScrollTag: () => (T.IdentityMapOfint$AutoScrollTagStateOfAutoScrollTag = dart.constFn(_js_helper.IdentityMap$(core.int, T.AutoScrollTagStateOfAutoScrollTag())))(),
+    VoidToFuture: () => (T.VoidToFuture = dart.constFn(dart.fnType(async.Future, [])))(),
+    FutureOfNull: () => (T.FutureOfNull = dart.constFn(async.Future$(core.Null)))(),
+    doubleToFutureOfNull: () => (T.doubleToFutureOfNull = dart.constFn(dart.fnType(T.FutureOfNull(), [core.double])))(),
+    intAndintToint: () => (T.intAndintToint = dart.constFn(dart.fnType(core.int, [core.int, core.int])))(),
+    AutoScrollPositionL: () => (T.AutoScrollPositionL = dart.constFn(dart.legacy(scroll_to_index.AutoScrollPosition)))(),
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    VoidTovoid: () => (T.VoidTovoid = dart.constFn(dart.fnType(dart.void, [])))(),
+    AnimationControllerN: () => (T.AnimationControllerN = dart.constFn(dart.nullable(animation_controller.AnimationController)))(),
+    LinkedMapOfAutoScrollTagStateOfAutoScrollTag$AnimationControllerN: () => (T.LinkedMapOfAutoScrollTagStateOfAutoScrollTag$AnimationControllerN = dart.constFn(_js_helper.LinkedMap$(T.AutoScrollTagStateOfAutoScrollTag(), T.AnimationControllerN())))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C0() {
+      return C[0] = dart.fn(scroll_to_index.defaultViewportBoundaryGetter, T.VoidToRect());
+    },
+    get C1() {
+      return C[1] = dart.const({
+        __proto__: core.Duration.prototype,
+        [Duration__duration]: 250000
+      });
+    },
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: core.Duration.prototype,
+        [Duration__duration]: 0
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: core.Duration.prototype,
+        [Duration__duration]: 3000000
+      });
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: scroll_to_index.AutoScrollPosition.prototype,
+        [_name$]: "AutoScrollPosition.begin",
+        index: 0
+      });
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: scroll_to_index.AutoScrollPosition.prototype,
+        [_name$]: "AutoScrollPosition.middle",
+        index: 1
+      });
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: scroll_to_index.AutoScrollPosition.prototype,
+        [_name$]: "AutoScrollPosition.end",
+        index: 2
+      });
+    },
+    get C7() {
+      return C[7] = dart.constList([C[4] || CT.C4, C[5] || CT.C5, C[6] || CT.C6], T.AutoScrollPositionL());
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "decoration",
+        [_Location_column]: 9,
+        [_Location_line]: 572,
+        [_Location_file]: null
+      });
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 580,
+        [_Location_file]: null
+      });
+    },
+    get C9() {
+      return C[9] = dart.constList([C[10] || CT.C10, C[11] || CT.C11], T._LocationL());
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[9] || CT.C9,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 571,
+        [_Location_file]: "file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/scroll_to_index-2.0.0/lib/scroll_to_index.dart"
+      });
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: core.Duration.prototype,
+        [Duration__duration]: 1000
+      });
+    }
+  }, false);
+  var C = Array(13).fill(void 0);
+  var I = [
+    "file:///C:/src/flutter/.pub-cache/hosted/pub.dartlang.org/scroll_to_index-2.0.0/lib/scroll_to_index.dart",
+    "package:scroll_to_index/scroll_to_index.dart"
+  ];
+  scroll_to_index.AutoScrollController = class AutoScrollController extends core.Object {
+    static new(opts) {
+      let initialScrollOffset = opts && 'initialScrollOffset' in opts ? opts.initialScrollOffset : 0;
+      if (initialScrollOffset == null) dart.nullFailed(I[0], 30, 15, "initialScrollOffset");
+      let keepScrollOffset = opts && 'keepScrollOffset' in opts ? opts.keepScrollOffset : true;
+      if (keepScrollOffset == null) dart.nullFailed(I[0], 31, 12, "keepScrollOffset");
+      let suggestedRowHeight = opts && 'suggestedRowHeight' in opts ? opts.suggestedRowHeight : null;
+      let viewportBoundaryGetter = opts && 'viewportBoundaryGetter' in opts ? opts.viewportBoundaryGetter : C[0] || CT.C0;
+      if (viewportBoundaryGetter == null) dart.nullFailed(I[0], 33, 30, "viewportBoundaryGetter");
+      let axis = opts && 'axis' in opts ? opts.axis : null;
+      let debugLabel = opts && 'debugLabel' in opts ? opts.debugLabel : null;
+      let copyTagsFrom = opts && 'copyTagsFrom' in opts ? opts.copyTagsFrom : null;
+      return new scroll_to_index.SimpleAutoScrollController.new({initialScrollOffset: initialScrollOffset, keepScrollOffset: keepScrollOffset, suggestedRowHeight: suggestedRowHeight, viewportBoundaryGetter: viewportBoundaryGetter, beginGetter: axis == basic_types.Axis.horizontal ? dart.fn(r => {
+          if (r == null) dart.nullFailed(I[0], 43, 49, "r");
+          return r.left;
+        }, T.RectTodouble()) : dart.fn(r => {
+          if (r == null) dart.nullFailed(I[0], 43, 65, "r");
+          return r.top;
+        }, T.RectTodouble()), endGetter: axis == basic_types.Axis.horizontal ? dart.fn(r => {
+          if (r == null) dart.nullFailed(I[0], 44, 47, "r");
+          return r.right;
+        }, T.RectTodouble()) : dart.fn(r => {
+          if (r == null) dart.nullFailed(I[0], 44, 64, "r");
+          return r.bottom;
+        }, T.RectTodouble()), copyTagsFrom: copyTagsFrom, debugLabel: debugLabel});
+    }
+  };
+  (scroll_to_index.AutoScrollController[dart.mixinNew] = function() {
+  }).prototype = scroll_to_index.AutoScrollController.prototype;
+  dart.addTypeTests(scroll_to_index.AutoScrollController);
+  dart.addTypeCaches(scroll_to_index.AutoScrollController);
+  scroll_to_index.AutoScrollController[dart.implements] = () => [scroll_controller.ScrollController];
+  dart.setLibraryUri(scroll_to_index.AutoScrollController, I[1]);
+  var suggestedRowHeight$ = dart.privateName(scroll_to_index, "SimpleAutoScrollController.suggestedRowHeight");
+  var viewportBoundaryGetter$ = dart.privateName(scroll_to_index, "SimpleAutoScrollController.viewportBoundaryGetter");
+  var beginGetter$ = dart.privateName(scroll_to_index, "SimpleAutoScrollController.beginGetter");
+  var endGetter$ = dart.privateName(scroll_to_index, "SimpleAutoScrollController.endGetter");
+  var tagMap = dart.privateName(scroll_to_index, "AutoScrollControllerMixin.tagMap");
+  var __isAutoScrolling = dart.privateName(scroll_to_index, "AutoScrollControllerMixin.__isAutoScrolling");
+  var _parentController = dart.privateName(scroll_to_index, "AutoScrollControllerMixin._parentController");
+  var __isAutoScrolling$ = dart.privateName(scroll_to_index, "__isAutoScrolling");
+  var _parentController$ = dart.privateName(scroll_to_index, "_parentController");
+  var _isAutoScrolling = dart.privateName(scroll_to_index, "_isAutoScrolling");
+  var Duration__duration = dart.privateName(core, "Duration._duration");
+  var _scrollToIndex = dart.privateName(scroll_to_index, "_scrollToIndex");
+  var _isEmptyStates = dart.privateName(scroll_to_index, "_isEmptyStates");
+  var _waitForWidgetStateBuild = dart.privateName(scroll_to_index, "_waitForWidgetStateBuild");
+  var _bringIntoViewportIfNeed = dart.privateName(scroll_to_index, "_bringIntoViewportIfNeed");
+  var _getNearestIndex = dart.privateName(scroll_to_index, "_getNearestIndex");
+  var _forecastMoveUnit = dart.privateName(scroll_to_index, "_forecastMoveUnit");
+  var _alignmentToPosition = dart.privateName(scroll_to_index, "_alignmentToPosition");
+  var _offsetToRevealInViewport = dart.privateName(scroll_to_index, "_offsetToRevealInViewport");
+  var _directionalOffsetToRevealInViewport = dart.privateName(scroll_to_index, "_directionalOffsetToRevealInViewport");
+  var _positionToAlignment = dart.privateName(scroll_to_index, "_positionToAlignment");
+  scroll_to_index.AutoScrollControllerMixin = class AutoScrollControllerMixin extends scroll_controller.ScrollController {};
+  scroll_to_index.AutoScrollControllerMixin[dart.mixinOn] = ScrollController => class AutoScrollControllerMixin extends ScrollController {
+    get tagMap() {
+      return this[tagMap];
+    }
+    set tagMap(value) {
+      super.tagMap = value;
+    }
+    get [__isAutoScrolling$]() {
+      return this[__isAutoScrolling];
+    }
+    set [__isAutoScrolling$](value) {
+      this[__isAutoScrolling] = value;
+    }
+    get [_parentController$]() {
+      return this[_parentController];
+    }
+    set [_parentController$](value) {
+      this[_parentController] = value;
+    }
+    set [_isAutoScrolling](isAutoScrolling) {
+      if (isAutoScrolling == null) dart.nullFailed(I[0], 158, 29, "isAutoScrolling");
+      this[__isAutoScrolling$] = isAutoScrolling;
+      if (!dart.test(isAutoScrolling) && dart.test(this.hasClients)) this.notifyListeners();
+    }
+    get isAutoScrolling() {
+      return this[__isAutoScrolling$];
+    }
+    set parentController(parentController) {
+      if (parentController == null) dart.nullFailed(I[0], 170, 41, "parentController");
+      if (dart.equals(this[_parentController$], parentController)) return;
+      let isNotEmpty = this.positions[$isNotEmpty];
+      if (dart.test(isNotEmpty) && this[_parentController$] != null) {
+        for (let p of dart.nullCheck(this[_parentController$]).positions)
+          if (dart.test(this.positions[$contains](p))) dart.nullCheck(this[_parentController$]).detach(p);
+      }
+      this[_parentController$] = parentController;
+      if (dart.test(isNotEmpty) && this[_parentController$] != null) for (let p of this.positions)
+        dart.nullCheck(this[_parentController$]).attach(p);
+    }
+    get hasParentController() {
+      return this[_parentController$] != null;
+    }
+    attach(position) {
+      let t0;
+      if (position == null) dart.nullFailed(I[0], 189, 30, "position");
+      super.attach(position);
+      t0 = this[_parentController$];
+      t0 == null ? null : t0.attach(position);
+    }
+    detach(position) {
+      let t0;
+      if (position == null) dart.nullFailed(I[0], 196, 30, "position");
+      t0 = this[_parentController$];
+      t0 == null ? null : t0.detach(position);
+      super.detach(position);
+    }
+    scrollToIndex(index, opts) {
+      if (index == null) dart.nullFailed(I[0], 204, 28, "index");
+      let duration = opts && 'duration' in opts ? opts.duration : C[1] || CT.C1;
+      if (duration == null) dart.nullFailed(I[0], 205, 17, "duration");
+      let preferPosition = opts && 'preferPosition' in opts ? opts.preferPosition : null;
+      return async.async(dart.dynamic, (function* scrollToIndex() {
+        return util.co(dart.dynamic, this, dart.fn(() => this[_scrollToIndex](index, {duration: duration, preferPosition: preferPosition}), T.VoidToFuture()));
+      }).bind(this));
+    }
+    [_scrollToIndex](index, opts) {
+      if (index == null) dart.nullFailed(I[0], 213, 29, "index");
+      let duration = opts && 'duration' in opts ? opts.duration : C[1] || CT.C1;
+      if (duration == null) dart.nullFailed(I[0], 214, 17, "duration");
+      let preferPosition = opts && 'preferPosition' in opts ? opts.preferPosition : null;
+      return async.async(dart.dynamic, (function* _scrollToIndex() {
+        let t0, t0$, t0$0;
+        if (!dart.test(duration['>'](core.Duration.zero))) dart.assertFailed(null, I[0], 216, 12, "duration > Duration.zero");
+        const makeSureStateIsReady = () => {
+          return async.async(dart.dynamic, (function* makeSureStateIsReady() {
+            for (let count = 0; count < 30; count = count + 1) {
+              if (dart.test(this[_isEmptyStates])) {
+                yield this[_waitForWidgetStateBuild]();
+              } else
+                return null;
+            }
+            return null;
+          }).bind(this));
+        };
+        dart.fn(makeSureStateIsReady, T.VoidToFuture());
+        yield makeSureStateIsReady();
+        if (!dart.test(this.hasClients)) return null;
+        if (dart.test(this.isIndexStateInLayoutRange(index))) {
+          this[_isAutoScrolling] = true;
+          yield this[_bringIntoViewportIfNeed](index, preferPosition, dart.fn(offset => {
+            if (offset == null) dart.nullFailed(I[0], 242, 19, "offset");
+            return async.async(core.Null, (function*() {
+              yield this.animateTo(offset, {duration: duration, curve: curves.Curves.ease});
+              yield this[_waitForWidgetStateBuild]();
+              return null;
+            }).bind(this));
+          }, T.doubleToFutureOfNull()));
+          this[_isAutoScrolling] = false;
+        } else {
+          let prevOffset = dart.notNull(this.offset) - 1;
+          let currentOffset = this.offset;
+          let contains = false;
+          let spentDuration = C[2] || CT.C2;
+          let lastScrollDirection = 0.5;
+          let moveDuration = duration['~/'](40);
+          this[_isAutoScrolling] = true;
+          let usedSuggestedRowHeightIfAny = true;
+          while (prevOffset != currentOffset && !dart.test(contains = this.isIndexStateInLayoutRange(index))) {
+            prevOffset = currentOffset;
+            let nearest = this[_getNearestIndex](index);
+            let moveTarget = dart.nullCheck(this[_forecastMoveUnit](index, nearest, usedSuggestedRowHeightIfAny));
+            if (moveTarget < 0) return null;
+            let suggestedDuration = usedSuggestedRowHeightIfAny && this.suggestedRowHeight != null ? duration : null;
+            usedSuggestedRowHeightIfAny = false;
+            lastScrollDirection = moveTarget - dart.notNull(prevOffset) > 0 ? 1.0 : 0.0;
+            currentOffset = moveTarget;
+            spentDuration = spentDuration['+']((t0 = suggestedDuration, t0 == null ? moveDuration : t0));
+            let oldOffset = this.offset;
+            yield this.animateTo(currentOffset, {duration: (t0$ = suggestedDuration, t0$ == null ? moveDuration : t0$), curve: curves.Curves.ease});
+            yield this[_waitForWidgetStateBuild]();
+            if (!dart.test(this.hasClients) || this.offset == oldOffset) {
+              contains = this.isIndexStateInLayoutRange(index);
+              break;
+            }
+          }
+          this[_isAutoScrolling] = false;
+          if (dart.test(contains) && dart.test(this.hasClients)) {
+            yield this[_bringIntoViewportIfNeed](index, (t0$0 = preferPosition, t0$0 == null ? this[_alignmentToPosition](lastScrollDirection) : t0$0), dart.fn(finalOffset => {
+              if (finalOffset == null) dart.nullFailed(I[0], 299, 14, "finalOffset");
+              return async.async(core.Null, (function*() {
+                if (finalOffset != this.offset) {
+                  this[_isAutoScrolling] = true;
+                  let remaining = duration['-'](spentDuration);
+                  yield this.animateTo(finalOffset, {duration: dart.test(remaining['<='](core.Duration.zero)) ? scroll_to_index._millisecond : remaining, curve: curves.Curves.ease});
+                  yield this[_waitForWidgetStateBuild]();
+                  if (dart.test(this.hasClients) && this.offset != finalOffset) {
+                    let count = 3;
+                    for (let i = 0; i < count && dart.test(this.hasClients) && this.offset != finalOffset; i = i + 1) {
+                      yield this.animateTo(finalOffset, {duration: scroll_to_index._millisecond, curve: curves.Curves.ease});
+                      yield this[_waitForWidgetStateBuild]();
+                    }
+                  }
+                  this[_isAutoScrolling] = false;
+                }
+              }).bind(this));
+            }, T.doubleToFutureOfNull()));
+          }
+        }
+        return null;
+      }).bind(this));
+    }
+    highlight(index, opts) {
+      if (index == null) dart.nullFailed(I[0], 329, 24, "index");
+      let cancelExistHighlights = opts && 'cancelExistHighlights' in opts ? opts.cancelExistHighlights : true;
+      if (cancelExistHighlights == null) dart.nullFailed(I[0], 330, 13, "cancelExistHighlights");
+      let highlightDuration = opts && 'highlightDuration' in opts ? opts.highlightDuration : C[3] || CT.C3;
+      if (highlightDuration == null) dart.nullFailed(I[0], 331, 16, "highlightDuration");
+      let animated = opts && 'animated' in opts ? opts.animated : true;
+      if (animated == null) dart.nullFailed(I[0], 332, 12, "animated");
+      return async.async(dart.dynamic, (function* highlight() {
+        let tag = this.tagMap[$_get](index);
+        return tag == null ? null : (yield tag.highlight({cancelExisting: cancelExistHighlights, highlightDuration: highlightDuration, animated: animated}));
+      }).bind(this));
+    }
+    cancelAllHighlights() {
+      scroll_to_index._cancelAllHighlights();
+    }
+    isIndexStateInLayoutRange(index) {
+      if (index == null) dart.nullFailed(I[0], 348, 38, "index");
+      return this.tagMap[$_get](index) != null;
+    }
+    get [_isEmptyStates]() {
+      return this.tagMap[$isEmpty];
+    }
+    [_waitForWidgetStateBuild]() {
+      return dart.nullCheck(binding.SchedulerBinding.instance).endOfFrame;
+    }
+    [_forecastMoveUnit](targetIndex, currentNearestIndex, useSuggested) {
+      let t0, t0$, t0$0, t0$1;
+      if (targetIndex == null) dart.nullFailed(I[0], 363, 11, "targetIndex");
+      if (useSuggested == null) dart.nullFailed(I[0], 363, 55, "useSuggested");
+      if (!(targetIndex != currentNearestIndex)) dart.assertFailed(null, I[0], 364, 12, "targetIndex != currentNearestIndex");
+      currentNearestIndex = (t0 = currentNearestIndex, t0 == null ? 0 : t0);
+      let alignment = dart.notNull(targetIndex) > dart.notNull(currentNearestIndex) ? 1.0 : 0.0;
+      let absoluteOffsetToViewport = null;
+      if (this.tagMap[$_get](currentNearestIndex) == null) return -1.0;
+      if (dart.test(useSuggested) && this.suggestedRowHeight != null) {
+        let indexDiff = dart.notNull(targetIndex) - dart.notNull(currentNearestIndex);
+        let offsetToLastState = dart.nullCheck(this[_offsetToRevealInViewport](currentNearestIndex, indexDiff <= 0 ? 0.0 : 1.0));
+        absoluteOffsetToViewport = math.max(core.double, dart.notNull(offsetToLastState.offset) + indexDiff * dart.nullCheck(this.suggestedRowHeight), 0.0);
+      } else {
+        let offsetToLastState = this[_offsetToRevealInViewport](currentNearestIndex, alignment);
+        if (!(dart.notNull((t0$0 = (t0$ = offsetToLastState, t0$ == null ? null : t0$.offset), t0$0 == null ? 0.0 : t0$0)) >= 0)) dart.assertFailed("ERROR: %%%%%%%%%%%%%%: " + dart.str(targetIndex) + ", " + dart.str(currentNearestIndex) + ", " + dart.str(alignment) + ", " + dart.str(offsetToLastState) + ", " + dart.str(this.tagMap[$keys][$toList]()[$join](",")), I[0], 381, 14, "(offsetToLastState?.offset ?? 0) >= 0");
+        absoluteOffsetToViewport = (t0$1 = offsetToLastState, t0$1 == null ? null : t0$1.offset);
+        if (absoluteOffsetToViewport == null) absoluteOffsetToViewport = 100;
+      }
+      return absoluteOffsetToViewport;
+    }
+    [_getNearestIndex](index) {
+      let t0;
+      if (index == null) dart.nullFailed(I[0], 391, 29, "index");
+      let list = this.tagMap[$keys];
+      if (dart.test(list[$isEmpty])) return null;
+      let sorted = (t0 = list[$toList](), (() => {
+        t0[$sort](dart.fn((first, second) => {
+          if (first == null) dart.nullFailed(I[0], 396, 19, "first");
+          if (second == null) dart.nullFailed(I[0], 396, 30, "second");
+          return first[$compareTo](second);
+        }, T.intAndintToint()));
+        return t0;
+      })());
+      let min = sorted[$first];
+      let max = sorted[$last];
+      return (dart.notNull(index) - dart.notNull(min))[$abs]() < (dart.notNull(index) - dart.notNull(max))[$abs]() ? min : max;
+    }
+    [_bringIntoViewportIfNeed](index, preferPosition, move) {
+      if (index == null) dart.nullFailed(I[0], 403, 39, "index");
+      if (move == null) dart.nullFailed(I[0], 404, 14, "move");
+      return async.async(dart.dynamic, (function* _bringIntoViewportIfNeed() {
+        let begin = this[_directionalOffsetToRevealInViewport](index, 0.0);
+        let end = this[_directionalOffsetToRevealInViewport](index, 1.0);
+        if (preferPosition != null) {
+          let targetOffset = this[_directionalOffsetToRevealInViewport](index, this[_positionToAlignment](preferPosition));
+          if (dart.notNull(targetOffset) < dart.notNull(this.position.minScrollExtent))
+            targetOffset = this.position.minScrollExtent;
+          else if (dart.notNull(targetOffset) > dart.notNull(this.position.maxScrollExtent)) targetOffset = this.position.maxScrollExtent;
+          yield move(targetOffset);
+        } else {
+          let alreadyInViewport = dart.notNull(this.offset) < dart.notNull(begin) && dart.notNull(this.offset) > dart.notNull(end);
+          if (!alreadyInViewport) {
+            let value = null;
+            if ((dart.notNull(end) - dart.notNull(this.offset))[$abs]() < (dart.notNull(begin) - dart.notNull(this.offset))[$abs]())
+              value = end;
+            else
+              value = begin;
+            yield move(dart.notNull(value) > 0 ? value : 0.0);
+          }
+        }
+      }).bind(this));
+    }
+    [_positionToAlignment](position) {
+      if (position == null) dart.nullFailed(I[0], 432, 50, "position");
+      return position == scroll_to_index.AutoScrollPosition.begin ? 0.0 : position == scroll_to_index.AutoScrollPosition.end ? 1.0 : 0.5;
+    }
+    [_alignmentToPosition](alignment) {
+      if (alignment == null) dart.nullFailed(I[0], 440, 50, "alignment");
+      return alignment === 0 ? scroll_to_index.AutoScrollPosition.begin : alignment === 1 ? scroll_to_index.AutoScrollPosition.end : scroll_to_index.AutoScrollPosition.middle;
+    }
+    [_directionalOffsetToRevealInViewport](index, alignment) {
+      let t0, t0$;
+      if (index == null) dart.nullFailed(I[0], 448, 51, "index");
+      if (alignment == null) dart.nullFailed(I[0], 448, 65, "alignment");
+      if (!(alignment === 0 || alignment === 0.5 || alignment === 1)) dart.assertFailed(null, I[0], 449, 12, "alignment == 0 || alignment == 0.5 || alignment == 1");
+      let tagOffsetInViewport = this[_offsetToRevealInViewport](index, alignment);
+      if (tagOffsetInViewport == null) {
+        return -1.0;
+      } else {
+        let absoluteOffsetToViewport = tagOffsetInViewport.offset;
+        if (alignment === 0.5) {
+          return absoluteOffsetToViewport;
+        } else if (alignment === 0) {
+          return dart.notNull(absoluteOffsetToViewport) - dart.notNull((t0 = this.viewportBoundaryGetter(), this.beginGetter(t0)));
+        } else {
+          return dart.notNull(absoluteOffsetToViewport) + dart.notNull((t0$ = this.viewportBoundaryGetter(), this.endGetter(t0$)));
+        }
+      }
+    }
+    [_offsetToRevealInViewport](index, alignment) {
+      let t0;
+      if (index == null) dart.nullFailed(I[0], 469, 49, "index");
+      if (alignment == null) dart.nullFailed(I[0], 469, 63, "alignment");
+      let ctx = (t0 = this.tagMap[$_get](index), t0 == null ? null : t0.context);
+      if (ctx == null) return null;
+      let renderBox = dart.nullCheck(ctx.findRenderObject());
+      if (!(scrollable.Scrollable.of(ctx) != null)) dart.assertFailed(null, I[0], 474, 12, "Scrollable.of(ctx) != null");
+      let viewport = dart.nullCheck(viewport$.RenderAbstractViewport.of(renderBox));
+      let revealedOffset = viewport.getOffsetToReveal(renderBox, alignment);
+      return revealedOffset;
+    }
+  };
+  (scroll_to_index.AutoScrollControllerMixin[dart.mixinNew] = function() {
+    this[tagMap] = new (T.IdentityMapOfint$AutoScrollTagStateOfAutoScrollTag()).new();
+    this[__isAutoScrolling] = false;
+    this[_parentController] = null;
+  }).prototype = scroll_to_index.AutoScrollControllerMixin.prototype;
+  dart.addTypeTests(scroll_to_index.AutoScrollControllerMixin);
+  dart.addTypeCaches(scroll_to_index.AutoScrollControllerMixin);
+  scroll_to_index.AutoScrollControllerMixin[dart.implements] = () => [scroll_to_index.AutoScrollController, scroll_controller.ScrollController];
+  dart.setMethodSignature(scroll_to_index.AutoScrollControllerMixin, () => ({
+    __proto__: dart.getMethods(scroll_to_index.AutoScrollControllerMixin.__proto__),
+    scrollToIndex: dart.fnType(async.Future, [core.int], {duration: core.Duration, preferPosition: dart.nullable(scroll_to_index.AutoScrollPosition)}, {}),
+    [_scrollToIndex]: dart.fnType(async.Future, [core.int], {duration: core.Duration, preferPosition: dart.nullable(scroll_to_index.AutoScrollPosition)}, {}),
+    highlight: dart.fnType(async.Future, [core.int], {animated: core.bool, cancelExistHighlights: core.bool, highlightDuration: core.Duration}, {}),
+    cancelAllHighlights: dart.fnType(dart.void, []),
+    isIndexStateInLayoutRange: dart.fnType(core.bool, [core.int]),
+    [_waitForWidgetStateBuild]: dart.fnType(async.Future, []),
+    [_forecastMoveUnit]: dart.fnType(dart.nullable(core.double), [core.int, dart.nullable(core.int), core.bool]),
+    [_getNearestIndex]: dart.fnType(dart.nullable(core.int), [core.int]),
+    [_bringIntoViewportIfNeed]: dart.fnType(async.Future, [core.int, dart.nullable(scroll_to_index.AutoScrollPosition), dart.fnType(async.Future, [core.double])]),
+    [_positionToAlignment]: dart.fnType(core.double, [scroll_to_index.AutoScrollPosition]),
+    [_alignmentToPosition]: dart.fnType(scroll_to_index.AutoScrollPosition, [core.double]),
+    [_directionalOffsetToRevealInViewport]: dart.fnType(core.double, [core.int, core.double]),
+    [_offsetToRevealInViewport]: dart.fnType(dart.nullable(viewport$.RevealedOffset), [core.int, core.double])
+  }));
+  dart.setGetterSignature(scroll_to_index.AutoScrollControllerMixin, () => ({
+    __proto__: dart.getGetters(scroll_to_index.AutoScrollControllerMixin.__proto__),
+    isAutoScrolling: core.bool,
+    hasParentController: core.bool,
+    [_isEmptyStates]: core.bool
+  }));
+  dart.setSetterSignature(scroll_to_index.AutoScrollControllerMixin, () => ({
+    __proto__: dart.getSetters(scroll_to_index.AutoScrollControllerMixin.__proto__),
+    [_isAutoScrolling]: core.bool,
+    parentController: scroll_controller.ScrollController
+  }));
+  dart.setLibraryUri(scroll_to_index.AutoScrollControllerMixin, I[1]);
+  dart.setFieldSignature(scroll_to_index.AutoScrollControllerMixin, () => ({
+    __proto__: dart.getFields(scroll_to_index.AutoScrollControllerMixin.__proto__),
+    tagMap: dart.finalFieldType(core.Map$(core.int, scroll_to_index.AutoScrollTagState$(scroll_to_index.AutoScrollTag))),
+    [__isAutoScrolling$]: dart.fieldType(core.bool),
+    [_parentController$]: dart.fieldType(dart.nullable(scroll_controller.ScrollController))
+  }));
+  dart.defineLazy(scroll_to_index.AutoScrollControllerMixin, {
+    /*scroll_to_index.AutoScrollControllerMixin.maxBound*/get maxBound() {
+      return 30;
+    }
+  }, false);
+  const ScrollController_AutoScrollControllerMixin$36 = class ScrollController_AutoScrollControllerMixin extends scroll_controller.ScrollController {};
+  (ScrollController_AutoScrollControllerMixin$36.new = function(opts) {
+    scroll_to_index.AutoScrollControllerMixin[dart.mixinNew].call(this);
+    ScrollController_AutoScrollControllerMixin$36.__proto__.new.call(this, opts);
+  }).prototype = ScrollController_AutoScrollControllerMixin$36.prototype;
+  dart.applyMixin(ScrollController_AutoScrollControllerMixin$36, scroll_to_index.AutoScrollControllerMixin);
+  scroll_to_index.SimpleAutoScrollController = class SimpleAutoScrollController extends ScrollController_AutoScrollControllerMixin$36 {
+    get suggestedRowHeight() {
+      return this[suggestedRowHeight$];
+    }
+    set suggestedRowHeight(value) {
+      super.suggestedRowHeight = value;
+    }
+    get viewportBoundaryGetter() {
+      return this[viewportBoundaryGetter$];
+    }
+    set viewportBoundaryGetter(value) {
+      super.viewportBoundaryGetter = value;
+    }
+    get beginGetter() {
+      return this[beginGetter$];
+    }
+    set beginGetter(value) {
+      super.beginGetter = value;
+    }
+    get endGetter() {
+      return this[endGetter$];
+    }
+    set endGetter(value) {
+      super.endGetter = value;
+    }
+  };
+  (scroll_to_index.SimpleAutoScrollController.new = function(opts) {
+    let initialScrollOffset = opts && 'initialScrollOffset' in opts ? opts.initialScrollOffset : 0;
+    if (initialScrollOffset == null) dart.nullFailed(I[0], 104, 15, "initialScrollOffset");
+    let keepScrollOffset = opts && 'keepScrollOffset' in opts ? opts.keepScrollOffset : true;
+    if (keepScrollOffset == null) dart.nullFailed(I[0], 105, 12, "keepScrollOffset");
+    let suggestedRowHeight = opts && 'suggestedRowHeight' in opts ? opts.suggestedRowHeight : null;
+    let viewportBoundaryGetter = opts && 'viewportBoundaryGetter' in opts ? opts.viewportBoundaryGetter : C[0] || CT.C0;
+    if (viewportBoundaryGetter == null) dart.nullFailed(I[0], 107, 12, "viewportBoundaryGetter");
+    let beginGetter = opts && 'beginGetter' in opts ? opts.beginGetter : null;
+    if (beginGetter == null) dart.nullFailed(I[0], 108, 21, "beginGetter");
+    let endGetter = opts && 'endGetter' in opts ? opts.endGetter : null;
+    if (endGetter == null) dart.nullFailed(I[0], 109, 21, "endGetter");
+    let copyTagsFrom = opts && 'copyTagsFrom' in opts ? opts.copyTagsFrom : null;
+    let debugLabel = opts && 'debugLabel' in opts ? opts.debugLabel : null;
+    this[suggestedRowHeight$] = suggestedRowHeight;
+    this[viewportBoundaryGetter$] = viewportBoundaryGetter;
+    this[beginGetter$] = beginGetter;
+    this[endGetter$] = endGetter;
+    scroll_to_index.SimpleAutoScrollController.__proto__.new.call(this, {initialScrollOffset: initialScrollOffset, keepScrollOffset: keepScrollOffset, debugLabel: debugLabel});
+    if (copyTagsFrom != null) this.tagMap[$addAll](copyTagsFrom.tagMap);
+  }).prototype = scroll_to_index.SimpleAutoScrollController.prototype;
+  dart.addTypeTests(scroll_to_index.SimpleAutoScrollController);
+  dart.addTypeCaches(scroll_to_index.SimpleAutoScrollController);
+  dart.setLibraryUri(scroll_to_index.SimpleAutoScrollController, I[1]);
+  dart.setFieldSignature(scroll_to_index.SimpleAutoScrollController, () => ({
+    __proto__: dart.getFields(scroll_to_index.SimpleAutoScrollController.__proto__),
+    suggestedRowHeight: dart.finalFieldType(dart.nullable(core.double)),
+    viewportBoundaryGetter: dart.finalFieldType(dart.fnType(ui.Rect, [])),
+    beginGetter: dart.finalFieldType(dart.fnType(core.double, [ui.Rect])),
+    endGetter: dart.finalFieldType(dart.fnType(core.double, [ui.Rect]))
+  }));
+  var suggestedRowHeight$0 = dart.privateName(scroll_to_index, "PageAutoScrollController.suggestedRowHeight");
+  var viewportBoundaryGetter$0 = dart.privateName(scroll_to_index, "PageAutoScrollController.viewportBoundaryGetter");
+  var beginGetter = dart.privateName(scroll_to_index, "PageAutoScrollController.beginGetter");
+  var endGetter = dart.privateName(scroll_to_index, "PageAutoScrollController.endGetter");
+  const PageController_AutoScrollControllerMixin$36 = class PageController_AutoScrollControllerMixin extends page_view.PageController {};
+  (PageController_AutoScrollControllerMixin$36.new = function(opts) {
+    scroll_to_index.AutoScrollControllerMixin[dart.mixinNew].call(this);
+    PageController_AutoScrollControllerMixin$36.__proto__.new.call(this, opts);
+  }).prototype = PageController_AutoScrollControllerMixin$36.prototype;
+  dart.applyMixin(PageController_AutoScrollControllerMixin$36, scroll_to_index.AutoScrollControllerMixin);
+  scroll_to_index.PageAutoScrollController = class PageAutoScrollController extends PageController_AutoScrollControllerMixin$36 {
+    get suggestedRowHeight() {
+      return this[suggestedRowHeight$0];
+    }
+    set suggestedRowHeight(value) {
+      super.suggestedRowHeight = value;
+    }
+    get viewportBoundaryGetter() {
+      return this[viewportBoundaryGetter$0];
+    }
+    set viewportBoundaryGetter(value) {
+      super.viewportBoundaryGetter = value;
+    }
+    get beginGetter() {
+      return this[beginGetter];
+    }
+    set beginGetter(value) {
+      super.beginGetter = value;
+    }
+    get endGetter() {
+      return this[endGetter];
+    }
+    set endGetter(value) {
+      super.endGetter = value;
+    }
+  };
+  (scroll_to_index.PageAutoScrollController.new = function(opts) {
+    let initialPage = opts && 'initialPage' in opts ? opts.initialPage : 0;
+    if (initialPage == null) dart.nullFailed(I[0], 132, 12, "initialPage");
+    let keepPage = opts && 'keepPage' in opts ? opts.keepPage : true;
+    if (keepPage == null) dart.nullFailed(I[0], 133, 12, "keepPage");
+    let viewportFraction = opts && 'viewportFraction' in opts ? opts.viewportFraction : 1;
+    if (viewportFraction == null) dart.nullFailed(I[0], 134, 14, "viewportFraction");
+    let suggestedRowHeight = opts && 'suggestedRowHeight' in opts ? opts.suggestedRowHeight : null;
+    let viewportBoundaryGetter = opts && 'viewportBoundaryGetter' in opts ? opts.viewportBoundaryGetter : C[0] || CT.C0;
+    if (viewportBoundaryGetter == null) dart.nullFailed(I[0], 136, 12, "viewportBoundaryGetter");
+    let copyTagsFrom = opts && 'copyTagsFrom' in opts ? opts.copyTagsFrom : null;
+    let debugLabel = opts && 'debugLabel' in opts ? opts.debugLabel : null;
+    this[beginGetter] = dart.fn(r => {
+      if (r == null) dart.nullFailed(I[0], 127, 40, "r");
+      return r.left;
+    }, T.RectTodouble());
+    this[endGetter] = dart.fn(r => {
+      if (r == null) dart.nullFailed(I[0], 129, 38, "r");
+      return r.right;
+    }, T.RectTodouble());
+    this[suggestedRowHeight$0] = suggestedRowHeight;
+    this[viewportBoundaryGetter$0] = viewportBoundaryGetter;
+    scroll_to_index.PageAutoScrollController.__proto__.new.call(this, {initialPage: initialPage, keepPage: keepPage, viewportFraction: viewportFraction});
+    if (copyTagsFrom != null) this.tagMap[$addAll](copyTagsFrom.tagMap);
+  }).prototype = scroll_to_index.PageAutoScrollController.prototype;
+  dart.addTypeTests(scroll_to_index.PageAutoScrollController);
+  dart.addTypeCaches(scroll_to_index.PageAutoScrollController);
+  dart.setLibraryUri(scroll_to_index.PageAutoScrollController, I[1]);
+  dart.setFieldSignature(scroll_to_index.PageAutoScrollController, () => ({
+    __proto__: dart.getFields(scroll_to_index.PageAutoScrollController.__proto__),
+    suggestedRowHeight: dart.finalFieldType(dart.nullable(core.double)),
+    viewportBoundaryGetter: dart.finalFieldType(dart.fnType(ui.Rect, [])),
+    beginGetter: dart.finalFieldType(dart.fnType(core.double, [ui.Rect])),
+    endGetter: dart.finalFieldType(dart.fnType(core.double, [ui.Rect]))
+  }));
+  var _name$ = dart.privateName(scroll_to_index, "_name");
+  scroll_to_index.AutoScrollPosition = class AutoScrollPosition extends core.Object {
+    toString() {
+      return this[_name$];
+    }
+  };
+  (scroll_to_index.AutoScrollPosition.new = function(index, _name) {
+    if (index == null) dart.nullFailed(I[0], 147, 6, "index");
+    if (_name == null) dart.nullFailed(I[0], 147, 6, "_name");
+    this.index = index;
+    this[_name$] = _name;
+    ;
+  }).prototype = scroll_to_index.AutoScrollPosition.prototype;
+  dart.addTypeTests(scroll_to_index.AutoScrollPosition);
+  dart.addTypeCaches(scroll_to_index.AutoScrollPosition);
+  dart.setLibraryUri(scroll_to_index.AutoScrollPosition, I[1]);
+  dart.setFieldSignature(scroll_to_index.AutoScrollPosition, () => ({
+    __proto__: dart.getFields(scroll_to_index.AutoScrollPosition.__proto__),
+    index: dart.finalFieldType(core.int),
+    [_name$]: dart.finalFieldType(core.String)
+  }));
+  dart.defineExtensionMethods(scroll_to_index.AutoScrollPosition, ['toString']);
+  scroll_to_index.AutoScrollPosition.begin = C[4] || CT.C4;
+  scroll_to_index.AutoScrollPosition.middle = C[5] || CT.C5;
+  scroll_to_index.AutoScrollPosition.end = C[6] || CT.C6;
+  scroll_to_index.AutoScrollPosition.values = C[7] || CT.C7;
+  var controller$ = dart.privateName(scroll_to_index, "AutoScrollTag.controller");
+  var index$ = dart.privateName(scroll_to_index, "AutoScrollTag.index");
+  var child$ = dart.privateName(scroll_to_index, "AutoScrollTag.child");
+  var color$ = dart.privateName(scroll_to_index, "AutoScrollTag.color");
+  var highlightColor$ = dart.privateName(scroll_to_index, "AutoScrollTag.highlightColor");
+  var disabled$ = dart.privateName(scroll_to_index, "AutoScrollTag.disabled");
+  scroll_to_index.AutoScrollTag = class AutoScrollTag extends framework.StatefulWidget {
+    get controller() {
+      return this[controller$];
+    }
+    set controller(value) {
+      super.controller = value;
+    }
+    get index() {
+      return this[index$];
+    }
+    set index(value) {
+      super.index = value;
+    }
+    get child() {
+      return this[child$];
+    }
+    set child(value) {
+      super.child = value;
+    }
+    get color() {
+      return this[color$];
+    }
+    set color(value) {
+      super.color = value;
+    }
+    get highlightColor() {
+      return this[highlightColor$];
+    }
+    set highlightColor(value) {
+      super.highlightColor = value;
+    }
+    get disabled() {
+      return this[disabled$];
+    }
+    set disabled(value) {
+      super.disabled = value;
+    }
+    createState() {
+      return new (T.AutoScrollTagStateOfAutoScrollTag()).new();
+    }
+  };
+  (scroll_to_index.AutoScrollTag.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    if (key == null) dart.nullFailed(I[0], 499, 21, "key");
+    let controller = opts && 'controller' in opts ? opts.controller : null;
+    if (controller == null) dart.nullFailed(I[0], 500, 21, "controller");
+    let index = opts && 'index' in opts ? opts.index : null;
+    if (index == null) dart.nullFailed(I[0], 501, 21, "index");
+    let child = opts && 'child' in opts ? opts.child : null;
+    if (child == null) dart.nullFailed(I[0], 502, 21, "child");
+    let color = opts && 'color' in opts ? opts.color : null;
+    let highlightColor = opts && 'highlightColor' in opts ? opts.highlightColor : null;
+    let disabled = opts && 'disabled' in opts ? opts.disabled : false;
+    if (disabled == null) dart.nullFailed(I[0], 505, 12, "disabled");
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[controller$] = controller;
+    this[index$] = index;
+    this[child$] = child;
+    this[color$] = color;
+    this[highlightColor$] = highlightColor;
+    this[disabled$] = disabled;
+    scroll_to_index.AutoScrollTag.__proto__.new.call(this, {key: key, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = scroll_to_index.AutoScrollTag.prototype;
+  dart.addTypeTests(scroll_to_index.AutoScrollTag);
+  dart.addTypeCaches(scroll_to_index.AutoScrollTag);
+  dart.setMethodSignature(scroll_to_index.AutoScrollTag, () => ({
+    __proto__: dart.getMethods(scroll_to_index.AutoScrollTag.__proto__),
+    createState: dart.fnType(scroll_to_index.AutoScrollTagState$(scroll_to_index.AutoScrollTag), [])
+  }));
+  dart.setLibraryUri(scroll_to_index.AutoScrollTag, I[1]);
+  dart.setFieldSignature(scroll_to_index.AutoScrollTag, () => ({
+    __proto__: dart.getFields(scroll_to_index.AutoScrollTag.__proto__),
+    controller: dart.finalFieldType(scroll_to_index.AutoScrollController),
+    index: dart.finalFieldType(core.int),
+    child: dart.finalFieldType(framework.Widget),
+    color: dart.finalFieldType(dart.nullable(ui.Color)),
+    highlightColor: dart.finalFieldType(dart.nullable(ui.Color)),
+    disabled: dart.finalFieldType(core.bool)
+  }));
+  var _controller = dart.privateName(scroll_to_index, "_controller");
+  var _startKey = dart.privateName(scroll_to_index, "_startKey");
+  var _cancelController = dart.privateName(scroll_to_index, "_cancelController");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  const _is_AutoScrollTagState_default = Symbol('_is_AutoScrollTagState_default');
+  scroll_to_index.AutoScrollTagState$ = dart.generic(W => {
+    const State_TickerProviderStateMixin$36 = class State_TickerProviderStateMixin extends framework.State$(W) {};
+    (State_TickerProviderStateMixin$36.new = function() {
+      ticker_provider.TickerProviderStateMixin$(W)[dart.mixinNew].call(this);
+      State_TickerProviderStateMixin$36.__proto__.new.call(this);
+    }).prototype = State_TickerProviderStateMixin$36.prototype;
+    dart.applyMixin(State_TickerProviderStateMixin$36, ticker_provider.TickerProviderStateMixin$(W));
+    class AutoScrollTagState extends State_TickerProviderStateMixin$36 {
+      initState() {
+        super.initState();
+        if (!dart.test(this.widget.disabled)) {
+          this.register(this.widget.index);
+        }
+      }
+      dispose() {
+        this[_cancelController]();
+        if (!dart.test(this.widget.disabled)) {
+          this.unregister(this.widget.index);
+        }
+        this[_controller] = null;
+        scroll_to_index._highlights[$remove](this);
+        super.dispose();
+      }
+      didUpdateWidget(oldWidget) {
+        W.as(oldWidget);
+        if (oldWidget == null) dart.nullFailed(I[0], 541, 26, "oldWidget");
+        super.didUpdateWidget(oldWidget);
+        if (oldWidget.index != this.widget.index || !dart.equals(oldWidget.key, this.widget.key) || oldWidget.disabled != this.widget.disabled) {
+          if (!dart.test(oldWidget.disabled)) this.unregister(oldWidget.index);
+          if (!dart.test(this.widget.disabled)) this.register(this.widget.index);
+        }
+      }
+      register(index) {
+        if (index == null) dart.nullFailed(I[0], 552, 21, "index");
+        this.widget.controller.tagMap[$_set](index, this);
+      }
+      unregister(index) {
+        if (index == null) dart.nullFailed(I[0], 559, 23, "index");
+        this[_cancelController]();
+        scroll_to_index._highlights[$remove](this);
+        if (dart.equals(this.widget.controller.tagMap[$_get](index), this)) this.widget.controller.tagMap[$remove](index);
+      }
+      build(context) {
+        let t0;
+        if (context == null) dart.nullFailed(I[0], 570, 29, "context");
+        return new transitions.DecoratedBoxTransition.new({decoration: new implicit_animations.DecorationTween.new({begin: this.widget.color != null ? new box_decoration.BoxDecoration.new({color: this.widget.color}) : new box_decoration.BoxDecoration.new(), end: this.widget.color != null ? new box_decoration.BoxDecoration.new({color: this.widget.color}) : new box_decoration.BoxDecoration.new({color: this.widget.highlightColor})}).animate((t0 = this[_controller], t0 == null ? animations.kAlwaysDismissedAnimation : t0)), child: this.widget.child, $creationLocationd_0dea112b090073317d4: C[8] || CT.C8});
+      }
+      highlight(opts) {
+        let cancelExisting = opts && 'cancelExisting' in opts ? opts.cancelExisting : true;
+        if (cancelExisting == null) dart.nullFailed(I[0], 589, 13, "cancelExisting");
+        let highlightDuration = opts && 'highlightDuration' in opts ? opts.highlightDuration : C[3] || CT.C3;
+        if (highlightDuration == null) dart.nullFailed(I[0], 590, 16, "highlightDuration");
+        let animated = opts && 'animated' in opts ? opts.animated : true;
+        if (animated == null) dart.nullFailed(I[0], 591, 12, "animated");
+        return async.async(dart.dynamic, (function* highlight() {
+          if (!dart.test(this.mounted)) return null;
+          if (dart.test(cancelExisting)) {
+            scroll_to_index._cancelAllHighlights(this);
+          }
+          if (dart.test(scroll_to_index._highlights[$containsKey](this))) {
+            if (!(this[_controller] != null)) dart.assertFailed(null, I[0], 599, 14, "_controller != null");
+            dart.nullCheck(this[_controller]).stop();
+          }
+          if (this[_controller] == null) {
+            this[_controller] = new animation_controller.AnimationController.new({vsync: this});
+            scroll_to_index._highlights[$_set](this, this[_controller]);
+          }
+          let startKey0 = this[_startKey] = new core.DateTime.now();
+          this.setState(dart.fn(() => {
+          }, T.VoidTovoid()));
+          if (dart.test(animated))
+            yield util.catchAnimationCancel(dart.nullCheck(this[_controller]).animateTo(1, {duration: scroll_to_index.scrollAnimationDuration}));
+          else
+            dart.nullCheck(this[_controller]).value = 1;
+          yield async.Future.delayed(highlightDuration);
+          if (startKey0._equals(this[_startKey])) {
+            if (dart.test(this.mounted)) {
+              this.setState(dart.fn(() => {
+              }, T.VoidTovoid()));
+              if (dart.test(animated))
+                yield util.catchAnimationCancel(dart.nullCheck(this[_controller]).animateTo(0, {duration: scroll_to_index.scrollAnimationDuration}));
+              else
+                dart.nullCheck(this[_controller]).value = 0;
+            }
+            if (startKey0._equals(this[_startKey])) {
+              this[_controller] = null;
+              scroll_to_index._highlights[$remove](this);
+            }
+          }
+          return null;
+        }).bind(this));
+      }
+      [_cancelController](opts) {
+        let reset = opts && 'reset' in opts ? opts.reset : true;
+        if (reset == null) dart.nullFailed(I[0], 637, 32, "reset");
+        if (this[_controller] != null) {
+          if (dart.test(dart.nullCheck(this[_controller]).isAnimating)) dart.nullCheck(this[_controller]).stop();
+          if (dart.test(reset) && dart.nullCheck(this[_controller]).value !== 0.0) dart.nullCheck(this[_controller]).value = 0.0;
+        }
+      }
+    }
+    (AutoScrollTagState.new = function() {
+      this[_controller] = null;
+      this[_startKey] = null;
+      AutoScrollTagState.__proto__.new.call(this);
+      ;
+    }).prototype = AutoScrollTagState.prototype;
+    dart.addTypeTests(AutoScrollTagState);
+    AutoScrollTagState.prototype[_is_AutoScrollTagState_default] = true;
+    dart.addTypeCaches(AutoScrollTagState);
+    dart.setMethodSignature(AutoScrollTagState, () => ({
+      __proto__: dart.getMethods(AutoScrollTagState.__proto__),
+      register: dart.fnType(dart.void, [core.int]),
+      unregister: dart.fnType(dart.void, [core.int]),
+      build: dart.fnType(framework.Widget, [framework.BuildContext]),
+      highlight: dart.fnType(async.Future, [], {animated: core.bool, cancelExisting: core.bool, highlightDuration: core.Duration}, {}),
+      [_cancelController]: dart.fnType(dart.void, [], {reset: core.bool}, {})
+    }));
+    dart.setLibraryUri(AutoScrollTagState, I[1]);
+    dart.setFieldSignature(AutoScrollTagState, () => ({
+      __proto__: dart.getFields(AutoScrollTagState.__proto__),
+      [_controller]: dart.fieldType(dart.nullable(animation_controller.AnimationController)),
+      [_startKey]: dart.fieldType(dart.nullable(core.DateTime))
+    }));
+    return AutoScrollTagState;
+  });
+  scroll_to_index.AutoScrollTagState = scroll_to_index.AutoScrollTagState$();
+  dart.addTypeTests(scroll_to_index.AutoScrollTagState, _is_AutoScrollTagState_default);
+  scroll_to_index.defaultViewportBoundaryGetter = function defaultViewportBoundaryGetter() {
+    return ui.Rect.zero;
+  };
+  scroll_to_index._cancelAllHighlights = function _cancelAllHighlights(state = null) {
+    for (let tag of scroll_to_index._highlights[$keys])
+      tag[_cancelController]({reset: !dart.equals(tag, state)});
+    scroll_to_index._highlights[$clear]();
+  };
+  dart.defineLazy(scroll_to_index, {
+    /*scroll_to_index.defaultScrollDistanceOffset*/get defaultScrollDistanceOffset() {
+      return 100;
+    },
+    /*scroll_to_index.defaultDurationUnit*/get defaultDurationUnit() {
+      return 40;
+    },
+    /*scroll_to_index._millisecond*/get _millisecond() {
+      return C[12] || CT.C12;
+    },
+    /*scroll_to_index._highlightDuration*/get _highlightDuration() {
+      return C[3] || CT.C3;
+    },
+    /*scroll_to_index.scrollAnimationDuration*/get scrollAnimationDuration() {
+      return C[1] || CT.C1;
+    },
+    /*scroll_to_index._highlights*/get _highlights() {
+      return new (T.LinkedMapOfAutoScrollTagStateOfAutoScrollTag$AnimationControllerN()).new();
+    },
+    set _highlights(_) {}
+  }, false);
+  dart.trackLibraries("packages/scroll_to_index/scroll_to_index.dart", {
+    "package:scroll_to_index/scroll_to_index.dart": scroll_to_index
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["scroll_to_index.dart"],"names":[],"mappings":"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","file":"../../../../../../../../D:/packages/scroll_to_index/scroll_to_index.dart.lib.js"}');
+  // Exports:
+  return {
+    scroll_to_index: scroll_to_index
+  };
+}));
+
+//# sourceMappingURL=scroll_to_index.dart.lib.js.map

@@ -1,0 +1,364 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/goodcoffee/Values/EdgeInsetsApp.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/painting/box_decoration.dart', 'packages/flutter/src/painting/border_radius.dart', 'packages/flutter/src/rendering/flex.dart', 'packages/goodcoffee/Modelo/Menu.dart', 'packages/flutter/src/painting/box_fit.dart'], (function load__packages__goodcoffee__Widgets__WebComponents__Body__Container__MenuContainer_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__goodcoffee__Values__EdgeInsetsApp$46dart, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__painting__box_decoration$46dart, packages__flutter__src__painting__border_radius$46dart, packages__flutter__src__rendering__flex$46dart, packages__goodcoffee__Modelo__Menu$46dart, packages__flutter__src__painting__box_fit$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const ui = dart_sdk.ui;
+  const _interceptors = dart_sdk._interceptors;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const container = packages__flutter__src__widgets__widget_span$46dart.src__widgets__container;
+  const image = packages__flutter__src__widgets__widget_span$46dart.src__widgets__image;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__text;
+  const ResponsiveApp = packages__goodcoffee__Values__EdgeInsetsApp$46dart.Values__ResponsiveApp;
+  const ink_well = packages__flutter__src__material__icon_button$46dart.src__material__ink_well;
+  const theme = packages__flutter__src__material__icon_button$46dart.src__material__theme;
+  const box_decoration = packages__flutter__src__painting__box_decoration$46dart.src__painting__box_decoration;
+  const border_radius = packages__flutter__src__painting__border_radius$46dart.src__painting__border_radius;
+  const flex = packages__flutter__src__rendering__flex$46dart.src__rendering__flex;
+  const Menu = packages__goodcoffee__Modelo__Menu$46dart.Modelo__Menu;
+  const box_fit = packages__flutter__src__painting__box_fit$46dart.src__painting__box_fit;
+  var MenuContainer = Object.create(dart.library);
+  var $_get = dartx._get;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    VoidTodynamic: () => (T.VoidTodynamic = dart.constFn(dart.fnType(dart.dynamic, [])))(),
+    doubleN: () => (T.doubleN = dart.constFn(dart.nullable(core.double)))(),
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    WidgetL: () => (T.WidgetL = dart.constFn(dart.legacy(framework.Widget)))(),
+    JSArrayOfWidgetL: () => (T.JSArrayOfWidgetL = dart.constFn(_interceptors.JSArray$(T.WidgetL())))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "name",
+        [_Location_column]: 42,
+        [_Location_line]: 36,
+        [_Location_file]: null
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 23,
+        [_Location_line]: 37,
+        [_Location_file]: null
+      });
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 23,
+        [_Location_line]: 38,
+        [_Location_file]: null
+      });
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "fit",
+        [_Location_column]: 23,
+        [_Location_line]: 39,
+        [_Location_file]: null
+      });
+    },
+    get C1() {
+      return C[1] = dart.constList([C[2] || CT.C2, C[3] || CT.C3, C[4] || CT.C4, C[5] || CT.C5], T._LocationL());
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 27,
+        [_Location_line]: 35,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Widgets/WebComponents/Body/Container/MenuContainer.dart"
+      });
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 42,
+        [_Location_line]: 42,
+        [_Location_file]: null
+      });
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 23,
+        [_Location_line]: 43,
+        [_Location_file]: null
+      });
+    },
+    get C7() {
+      return C[7] = dart.constList([C[8] || CT.C8, C[9] || CT.C9], T._LocationL());
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[7] || CT.C7,
+        [_Location_name]: null,
+        [_Location_column]: 21,
+        [_Location_line]: 41,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Widgets/WebComponents/Body/Container/MenuContainer.dart"
+      });
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisAlignment",
+        [_Location_column]: 19,
+        [_Location_line]: 33,
+        [_Location_file]: null
+      });
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 19,
+        [_Location_line]: 34,
+        [_Location_file]: null
+      });
+    },
+    get C11() {
+      return C[11] = dart.constList([C[12] || CT.C12, C[13] || CT.C13], T._LocationL());
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[11] || CT.C11,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 32,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Widgets/WebComponents/Body/Container/MenuContainer.dart"
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 15,
+        [_Location_line]: 26,
+        [_Location_file]: null
+      });
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 15,
+        [_Location_line]: 27,
+        [_Location_file]: null
+      });
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "decoration",
+        [_Location_column]: 15,
+        [_Location_line]: 28,
+        [_Location_file]: null
+      });
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 15,
+        [_Location_line]: 32,
+        [_Location_file]: null
+      });
+    },
+    get C15() {
+      return C[15] = dart.constList([C[16] || CT.C16, C[17] || CT.C17, C[18] || CT.C18, C[19] || CT.C19], T._LocationL());
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[15] || CT.C15,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 25,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Widgets/WebComponents/Body/Container/MenuContainer.dart"
+      });
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onTap",
+        [_Location_column]: 11,
+        [_Location_line]: 24,
+        [_Location_file]: null
+      });
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 11,
+        [_Location_line]: 25,
+        [_Location_file]: null
+      });
+    },
+    get C21() {
+      return C[21] = dart.constList([C[22] || CT.C22, C[23] || CT.C23], T._LocationL());
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[21] || CT.C21,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 23,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Widgets/WebComponents/Body/Container/MenuContainer.dart"
+      });
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 9,
+        [_Location_line]: 22,
+        [_Location_file]: null
+      });
+    },
+    get C27() {
+      return C[27] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 23,
+        [_Location_file]: null
+      });
+    },
+    get C25() {
+      return C[25] = dart.constList([C[26] || CT.C26, C[27] || CT.C27], T._LocationL());
+    },
+    get C24() {
+      return C[24] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[25] || CT.C25,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 21,
+        [_Location_file]: "file:///D:/flutter/GoodCoffee-main/lib/Widgets/WebComponents/Body/Container/MenuContainer.dart"
+      });
+    }
+  }, false);
+  var C = Array(28).fill(void 0);
+  var I = ["package:goodcoffee/Widgets/WebComponents/Body/Container/MenuContainer.dart"];
+  var index$ = dart.privateName(MenuContainer, "MenuContainer.index");
+  var onPress$ = dart.privateName(MenuContainer, "MenuContainer.onPress");
+  MenuContainer.MenuContainer = class MenuContainer$ extends framework.StatefulWidget {
+    get index() {
+      return this[index$];
+    }
+    set index(value) {
+      super.index = value;
+    }
+    get onPress() {
+      return this[onPress$];
+    }
+    set onPress(value) {
+      super.onPress = value;
+    }
+    createState() {
+      return new MenuContainer._MenuContainerState.new();
+    }
+  };
+  (MenuContainer.MenuContainer.new = function(opts) {
+    let key = opts && 'key' in opts ? opts.key : null;
+    let index = opts && 'index' in opts ? opts.index : null;
+    let onPress = opts && 'onPress' in opts ? opts.onPress : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[index$] = index;
+    this[onPress$] = onPress;
+    MenuContainer.MenuContainer.__proto__.new.call(this, {key: key, $creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = MenuContainer.MenuContainer.prototype;
+  dart.addTypeTests(MenuContainer.MenuContainer);
+  dart.addTypeCaches(MenuContainer.MenuContainer);
+  dart.setMethodSignature(MenuContainer.MenuContainer, () => ({
+    __proto__: dart.getMethods(MenuContainer.MenuContainer.__proto__),
+    createState: dart.fnType(dart.legacy(MenuContainer._MenuContainerState), [])
+  }));
+  dart.setLibraryUri(MenuContainer.MenuContainer, I[0]);
+  dart.setFieldSignature(MenuContainer.MenuContainer, () => ({
+    __proto__: dart.getFields(MenuContainer.MenuContainer.__proto__),
+    index: dart.finalFieldType(dart.legacy(core.int)),
+    onPress: dart.finalFieldType(dart.dynamic)
+  }));
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  MenuContainer._MenuContainerState = class _MenuContainerState extends framework.State$(dart.legacy(MenuContainer.MenuContainer)) {
+    build(context) {
+      this.responsiveApp = new ResponsiveApp.ResponsiveApp.new(context);
+      return new basic.Padding.new({padding: this.responsiveApp.edgeInsetsApp.hrzSmallEdgeInsets, child: new ink_well.InkWell.new({onTap: dart.fn(() => dart.dsend(this.widget, 'onPress', []), T.VoidTodynamic()), child: new container.Container.new({width: T.doubleN().as(this.responsiveApp.menuContainerWidth), height: T.doubleN().as(this.responsiveApp.menuContainerHeight), decoration: new box_decoration.BoxDecoration.new({color: theme.Theme.of(context).cardColor, borderRadius: new border_radius.BorderRadius.all(new ui.Radius.circular(core.double.as(this.responsiveApp.menuRadiusWidth)))}), child: new basic.Column.new({mainAxisAlignment: flex.MainAxisAlignment.center, children: T.JSArrayOfWidgetL().of([new image.Image.asset(Menu.menu[$_get](this.widget.index).image, {width: T.doubleN().as(this.responsiveApp.menuImageWidth), height: T.doubleN().as(this.responsiveApp.menuImageHeight), fit: box_fit.BoxFit.fill, $creationLocationd_0dea112b090073317d4: C[0] || CT.C0}), new text.Text.new(Menu.menu[$_get](this.widget.index).title, {style: theme.Theme.of(context).textTheme.bodyText1, $creationLocationd_0dea112b090073317d4: C[6] || CT.C6})]), $creationLocationd_0dea112b090073317d4: C[10] || CT.C10}), $creationLocationd_0dea112b090073317d4: C[14] || CT.C14}), $creationLocationd_0dea112b090073317d4: C[20] || CT.C20}), $creationLocationd_0dea112b090073317d4: C[24] || CT.C24});
+    }
+  };
+  (MenuContainer._MenuContainerState.new = function() {
+    this.responsiveApp = null;
+    MenuContainer._MenuContainerState.__proto__.new.call(this);
+    ;
+  }).prototype = MenuContainer._MenuContainerState.prototype;
+  dart.addTypeTests(MenuContainer._MenuContainerState);
+  dart.addTypeCaches(MenuContainer._MenuContainerState);
+  dart.setMethodSignature(MenuContainer._MenuContainerState, () => ({
+    __proto__: dart.getMethods(MenuContainer._MenuContainerState.__proto__),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+  }));
+  dart.setLibraryUri(MenuContainer._MenuContainerState, I[0]);
+  dart.setFieldSignature(MenuContainer._MenuContainerState, () => ({
+    __proto__: dart.getFields(MenuContainer._MenuContainerState.__proto__),
+    responsiveApp: dart.fieldType(dart.legacy(ResponsiveApp.ResponsiveApp))
+  }));
+  dart.trackLibraries("packages/goodcoffee/Widgets/WebComponents/Body/Container/MenuContainer.dart", {
+    "package:goodcoffee/Widgets/WebComponents/Body/Container/MenuContainer.dart": MenuContainer
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["MenuContainer.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAQY;;;;;;IACJ;;;;;;;AAG+B;IAAqB;;;QANjC;QAAU;QAAY;;IAAZ;IAAY;AAAY,+DAAW,GAAG;;EAAC;;;;;;;;;;;;;;;;;;;UAYhD;AACY,MAApC,qBAAc,oCAAc,OAAO;AACnC,YAAO,iCACM,AAAc,AAAc,4DAC9B,iCACE,cAAoB,WAAd,wDACN,mDACI,AAAc,+DACb,AAAc,qDACV,6CACK,AAAY,eAAT,OAAO,2BACI,mCAAW,sCAAS,AAAc,gDAE1D,yCACkC,yCAC3B,yBACF,sBACJ,AAAI,AAAe,iBAAd,AAAO,iDACL,AAAc,2DACb,AAAc,0CACV,8EAEd,kBACE,AAAI,AAAe,iBAAd,AAAO,kCACC,AAAY,AAAU,eAAnB,OAAO;IAI3C;;;IA9Bc;;;EA+BhB","file":"../../../../../../../packages/goodcoffee/Widgets/WebComponents/Body/Container/MenuContainer.dart.lib.js"}');
+  // Exports:
+  return {
+    Widgets__WebComponents__Body__Container__MenuContainer: MenuContainer
+  };
+}));
+
+//# sourceMappingURL=MenuContainer.dart.lib.js.map
